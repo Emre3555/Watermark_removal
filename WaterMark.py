@@ -1,5 +1,5 @@
 
-from PIL import ImageFont, ImageDraw, Image,ImageChops,ImageEnhance
+from PIL import ImageFont, ImageDraw, Image, ImageChops, ImageEnhance
 import numpy as np
 import cv2
 import random
