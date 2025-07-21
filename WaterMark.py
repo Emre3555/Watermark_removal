@@ -8,6 +8,12 @@ import os
 import json
 from math import sin, cos, radians
 
+FONT_PATH = "./msyh.ttc"
+INPUT_DIR = "./CarPhotos"
+OUTPUT_DIR = "./Output_Photos"
+LOGO_DIR = "./Logos"
+THIS_DIR = "./"
+
 def rotate_image_opencv(pil_img, angle):
     # Convert PIL to NumPy array (RGBA)
     img_np = np.array(pil_img)
@@ -240,7 +246,7 @@ def safe_char_from_range(rng):#helper function
 
 def put_unicode_text(image, text, position, font_path, font_size, color, angle, opacity):
     # Convert OpenCV BGR image to RGBA PIL Image (add alpha channel)
-    font_path = "C:/Windows/Fonts/msyh.ttc"
+    font_path = FONT_PATH
     image_pil = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB)).convert("RGBA")
 
     # Create a transparent image for the text
@@ -293,7 +299,7 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
         logo_img = crop_transparent_padding(logo_path)
         if(gray_scale):
             logo_img = convert_to_grayscale(logo_img)
-    font_path = "C:/Windows/Fonts/msyh.ttc"
+    font_path = FONT_PATH
     numerical_size = {
         "Small": random.uniform(0.5, 0.8),
         "Medium": random.uniform(0.8, 1.1),
@@ -585,9 +591,9 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
 
 metadata = []
 image_id = 0
-input_dir = r"C:\Users\Altuner\Desktop\CarPhotos"
-output_dir = r"C:\Users\Altuner\Desktop\Output_Photos"
-logo_dir = r"C:\\Users\\Altuner\\Desktop\\Logos"
+input_dir = INPUT_DIR
+output_dir = OUTPUT_DIR
+logo_dir = LOGO_DIR
 logo_files = get_pngs_with_transparent_background(logo_dir)
 for i in range(1,46):
     filename = os.path.join(input_dir, f"{i}.jpg")
@@ -621,10 +627,5 @@ for i in range(1,46):
         "Difference Percentage": diff_ratio * 100,
         "GrayScale": gray_scale if content_type == "Logo" or content_type == "Both" else None
     })
-        this_dir = r"C:\Users\Altuner\Desktop\WaterMarkRemoval"
+        this_dir = THIS_DIR
         with open(os.path.join(this_dir, "metadata.json"), "w", encoding="utf-8") as f:json.dump(metadata, f, indent=4, ensure_ascii=False)
-
-
-
-
-
