@@ -1,0 +1,1121 @@
+[
+    {
+        "image_id": 1,
+        "content": {
+            "type": "Logo",
+            "language": [],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Transparent",
+            0.6245771368372062
+        ],
+        "size": "Large",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 25.170392449080975,
+        "GrayScale": true
+    },
+    {
+        "image_id": 2,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 6
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Opaque",
+            0.9621758861075758
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            0,
+            255,
+            0
+        ],
+        "Success": false,
+        "Difference Percentage": 45.564115801596444,
+        "GrayScale": null
+    },
+    {
+        "image_id": 3,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 3
+        },
+        "location": "Repetitive",
+        "pattern": "Diamond",
+        "appearance": [
+            "Transparent",
+            0.6972314674900407
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            0,
+            255,
+            0
+        ],
+        "Success": false,
+        "Difference Percentage": 56.24006675143038,
+        "GrayScale": null
+    },
+    {
+        "image_id": 4,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 0
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Opaque",
+            0.936470299567038
+        ],
+        "size": "Large",
+        "angle": "Inclined",
+        "color": [
+            0,
+            255,
+            0
+        ],
+        "Success": false,
+        "Difference Percentage": 52.90809736711376,
+        "GrayScale": null
+    },
+    {
+        "image_id": 5,
+        "content": {
+            "type": "Logo",
+            "language": [],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Transparent",
+            0.659459336336335
+        ],
+        "size": "Large",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 45.09621476084891,
+        "GrayScale": true
+    },
+    {
+        "image_id": 6,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 0
+        },
+        "location": "Repetitive",
+        "pattern": "Diamond",
+        "appearance": [
+            "Transparent",
+            0.6060437466711134
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 22.843609441547585,
+        "GrayScale": null
+    },
+    {
+        "image_id": 7,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 6
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Opaque",
+            0.9770270565761577
+        ],
+        "size": "Large",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 33.30555555555556,
+        "GrayScale": null
+    },
+    {
+        "image_id": 8,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 0
+        },
+        "location": "Repetitive",
+        "pattern": "Diamond",
+        "appearance": [
+            "Semi-Transparent",
+            0.7252377699729962
+        ],
+        "size": "Large",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 28.943396226415096,
+        "GrayScale": null
+    },
+    {
+        "image_id": 9,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 0
+        },
+        "location": "Repetitive",
+        "pattern": "Diamond",
+        "appearance": [
+            "Semi-Transparent",
+            0.7621722917770197
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 35.60059612518629,
+        "GrayScale": null
+    },
+    {
+        "image_id": 10,
+        "content": {
+            "type": "Both",
+            "language": [
+                "Latin"
+            ],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Diamond",
+        "appearance": [
+            "Semi-Transparent",
+            0.7038352303293898
+        ],
+        "size": "Medium",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 40.683556880278196,
+        "GrayScale": true
+    },
+    {
+        "image_id": 11,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 6
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Semi-Transparent",
+            0.729845251698903
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 29.648131194522946,
+        "GrayScale": null
+    },
+    {
+        "image_id": 12,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 6
+        },
+        "location": "Repetitive",
+        "pattern": "Diamond",
+        "appearance": [
+            "Transparent",
+            0.6781001381435319
+        ],
+        "size": "Medium",
+        "angle": "Inclined",
+        "color": [
+            0,
+            0,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 32.476190476190474,
+        "GrayScale": null
+    },
+    {
+        "image_id": 13,
+        "content": {
+            "type": "Both",
+            "language": [
+                "Latin"
+            ],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Semi-Transparent",
+            0.7648121988666242
+        ],
+        "size": "Large",
+        "angle": "Inclined",
+        "color": [
+            0,
+            0,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 23.743524852702755,
+        "GrayScale": true
+    },
+    {
+        "image_id": 14,
+        "content": {
+            "type": "Logo",
+            "language": [],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Diamond",
+        "appearance": [
+            "Transparent",
+            0.654655407290252
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 39.61251862891207,
+        "GrayScale": true
+    },
+    {
+        "image_id": 15,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Greek"
+            ],
+            "font": 0
+        },
+        "location": "Repetitive",
+        "pattern": "Diamond",
+        "appearance": [
+            "Transparent",
+            0.6244025479544112
+        ],
+        "size": "Medium",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 25.125328240630225,
+        "GrayScale": null
+    },
+    {
+        "image_id": 16,
+        "content": {
+            "type": "Both",
+            "language": [
+                "Latin"
+            ],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Transparent",
+            0.623066435860414
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            0,
+            255,
+            0
+        ],
+        "Success": false,
+        "Difference Percentage": 35.69642857142858,
+        "GrayScale": true
+    },
+    {
+        "image_id": 17,
+        "content": {
+            "type": "Both",
+            "language": [
+                "Latin"
+            ],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Semi-Transparent",
+            0.7161833132201265
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 38.920511085459545,
+        "GrayScale": true
+    },
+    {
+        "image_id": 18,
+        "content": {
+            "type": "Both",
+            "language": [
+                "Latin"
+            ],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Transparent",
+            0.6613339353389861
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 29.128968253968253,
+        "GrayScale": true
+    },
+    {
+        "image_id": 19,
+        "content": {
+            "type": "Logo",
+            "language": [],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Diamond",
+        "appearance": [
+            "Opaque",
+            0.9545469389213775
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            0,
+            0
+        ],
+        "Success": false,
+        "Difference Percentage": 49.87269761705852,
+        "GrayScale": true
+    },
+    {
+        "image_id": 21,
+        "content": {
+            "type": "Both",
+            "language": [
+                "Latin",
+                "Cyrillic"
+            ],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Diamond",
+        "appearance": [
+            "Transparent",
+            0.6324436841241676
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 34.32936507936508,
+        "GrayScale": true
+    },
+    {
+        "image_id": 22,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 3
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Transparent",
+            0.679051303760136
+        ],
+        "size": "Medium",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 17.124214211824622,
+        "GrayScale": null
+    },
+    {
+        "image_id": 23,
+        "content": {
+            "type": "Logo",
+            "language": [],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Transparent",
+            0.6279634280761427
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 19.207763913646268,
+        "GrayScale": true
+    },
+    {
+        "image_id": 24,
+        "content": {
+            "type": "Logo",
+            "language": [],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Semi-Transparent",
+            0.7831480510108123
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 50.040735221063095,
+        "GrayScale": true
+    },
+    {
+        "image_id": 25,
+        "content": {
+            "type": "Logo",
+            "language": [],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Semi-Transparent",
+            0.7513641668430315
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 31.007798201639215,
+        "GrayScale": true
+    },
+    {
+        "image_id": 26,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 3
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Opaque",
+            0.8731832931444341
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 35.71655924246041,
+        "GrayScale": null
+    },
+    {
+        "image_id": 27,
+        "content": {
+            "type": "Both",
+            "language": [
+                "Latin"
+            ],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Diamond",
+        "appearance": [
+            "Semi-Transparent",
+            0.7310488888324097
+        ],
+        "size": "Medium",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 20.069547938400397,
+        "GrayScale": true
+    },
+    {
+        "image_id": 28,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Greek"
+            ],
+            "font": 0
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Semi-Transparent",
+            0.7359806536992367
+        ],
+        "size": "Medium",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 31.96169772256729,
+        "GrayScale": null
+    },
+    {
+        "image_id": 29,
+        "content": {
+            "type": "Logo",
+            "language": [],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Semi-Transparent",
+            0.7303266661976869
+        ],
+        "size": "Medium",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 38.13492063492063,
+        "GrayScale": true
+    },
+    {
+        "image_id": 30,
+        "content": {
+            "type": "Logo",
+            "language": [],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Diamond",
+        "appearance": [
+            "Semi-Transparent",
+            0.7848877355648569
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 56.76573565687912,
+        "GrayScale": true
+    },
+    {
+        "image_id": 31,
+        "content": {
+            "type": "Logo",
+            "language": [],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Transparent",
+            0.6950150698861518
+        ],
+        "size": "Medium",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 18.476190476190478,
+        "GrayScale": true
+    },
+    {
+        "image_id": 32,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 3
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Transparent",
+            0.6350283309144809
+        ],
+        "size": "Large",
+        "angle": "Inclined",
+        "color": [
+            0,
+            0,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 32.07607225272539,
+        "GrayScale": null
+    },
+    {
+        "image_id": 33,
+        "content": {
+            "type": "Logo",
+            "language": [],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Diamond",
+        "appearance": [
+            "Transparent",
+            0.6306645205662397
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 33.4566722368107,
+        "GrayScale": true
+    },
+    {
+        "image_id": 34,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin",
+                "Cyrillic"
+            ],
+            "font": 3
+        },
+        "location": "Repetitive",
+        "pattern": "Diamond",
+        "appearance": [
+            "Transparent",
+            0.6330304022613187
+        ],
+        "size": "Medium",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 27.023809523809522,
+        "GrayScale": null
+    },
+    {
+        "image_id": 35,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 6
+        },
+        "location": "Repetitive",
+        "pattern": "Diamond",
+        "appearance": [
+            "Semi-Transparent",
+            0.7184548176525878
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 24.269390030259597,
+        "GrayScale": null
+    },
+    {
+        "image_id": 36,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 6
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Semi-Transparent",
+            0.7523945150009803
+        ],
+        "size": "Medium",
+        "angle": "Inclined",
+        "color": [
+            255,
+            0,
+            0
+        ],
+        "Success": false,
+        "Difference Percentage": 27.65079365079365,
+        "GrayScale": null
+    },
+    {
+        "image_id": 37,
+        "content": {
+            "type": "Both",
+            "language": [
+                "Greek"
+            ],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Diamond",
+        "appearance": [
+            "Opaque",
+            0.9325458728038432
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            0,
+            0,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 35.89087301587301,
+        "GrayScale": true
+    },
+    {
+        "image_id": 38,
+        "content": {
+            "type": "Both",
+            "language": [
+                "Latin"
+            ],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Diamond",
+        "appearance": [
+            "Opaque",
+            0.8849905257124833
+        ],
+        "size": "Medium",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 20.966269841269842,
+        "GrayScale": true
+    },
+    {
+        "image_id": 39,
+        "content": {
+            "type": "Logo",
+            "language": [],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Transparent",
+            0.6954322653119627
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 47.242063492063494,
+        "GrayScale": true
+    },
+    {
+        "image_id": 40,
+        "content": {
+            "type": "Logo",
+            "language": [],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Opaque",
+            0.8838203452382429
+        ],
+        "size": "Large",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 39.77431039286709,
+        "GrayScale": true
+    },
+    {
+        "image_id": 41,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 6
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Transparent",
+            0.6254517697593807
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 25.46272340086773,
+        "GrayScale": null
+    },
+    {
+        "image_id": 42,
+        "content": {
+            "type": "Logo",
+            "language": [],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Transparent",
+            0.691616042952514
+        ],
+        "size": "Medium",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 12.82724596164558,
+        "GrayScale": true
+    },
+    {
+        "image_id": 43,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 6
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Semi-Transparent",
+            0.7815497266246959
+        ],
+        "size": "Large",
+        "angle": "Inclined",
+        "color": [
+            0,
+            0,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 29.115938569268717,
+        "GrayScale": null
+    },
+    {
+        "image_id": 44,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin",
+                "Chinese"
+            ],
+            "font": 0
+        },
+        "location": "Repetitive",
+        "pattern": "Diamond",
+        "appearance": [
+            "Transparent",
+            0.6141506484310322
+        ],
+        "size": "Large",
+        "angle": "Inclined",
+        "color": [
+            255,
+            0,
+            0
+        ],
+        "Success": false,
+        "Difference Percentage": 17.580298934647796,
+        "GrayScale": null
+    },
+    {
+        "image_id": 45,
+        "content": {
+            "type": "Both",
+            "language": [
+                "Latin"
+            ],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": "Grid",
+        "appearance": [
+            "Semi-Transparent",
+            0.7860870675090731
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 38.773235680452174,
+        "GrayScale": true
+    }
+]
