@@ -319,21 +319,17 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
     # Determine region size for safe placement
     if content_type == "Both":
         logo_w, logo_h = logo_img.size
-        logo_scale = { #scaling also
-            "Small": random.uniform(0.1, 0.15),
-            "Medium": random.uniform(0.15, 0.2),
-            "Large": random.uniform(0.2, 0.25)
-        }[size]
-        new_logo_width = int(w * logo_scale)
-        new_logo_height = int(logo_h * (new_logo_width / logo_w))
-        logo_img = logo_img.resize((new_logo_width, new_logo_height), Image.Resampling.LANCZOS)
-        if angle == "Inclined":
-            logo_img = logo_img.rotate(num_angle, expand=True)
         pil_font = ImageFont.truetype(font_path, font_size)
         bbox = pil_font.getbbox(text)
         text_w, text_h = bbox[2] - bbox[0], bbox[3] - bbox[1]
-        region_w = new_logo_width + text_w + 10
-        region_h = max(new_logo_height, text_h)
+
+        if(logo_h > 3*text_h or logo_h < 0.8 * text_h):
+            target_logo_height = int(text_h * random.uniform(2, 3))
+            target_logo_width = int(logo_w * (target_logo_height / logo_h))
+            logo_img = logo_img.resize((target_logo_width, target_logo_height), Image.Resampling.LANCZOS)
+        # Match logo height to text height with a slight multiplier (optional)
+        region_w = target_logo_width + text_w + 10
+        region_h = max(target_logo_height, text_h)
 
     elif content_type == "Text":
         pil_font = ImageFont.truetype(font_path, font_size)
@@ -350,8 +346,6 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
         new_logo_width = int(w * logo_scale)
         new_logo_height = int(logo_h * (new_logo_width / logo_w))
         logo_img = logo_img.resize((new_logo_width, new_logo_height), Image.Resampling.LANCZOS)
-        if angle == "Inclined":
-            logo_img = logo_img.rotate(num_angle, expand=True)
         region_w, region_h = logo_img.size
 
     # Repetitive pattern
@@ -382,7 +376,7 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
             
 
             x_step = int(region_w * random.uniform(1.2, 1.8))
-            y_step = int(region_h * random.uniform(1.2, 1.8))
+            y_step = int(region_h * random.uniform(1.4, 2))
 
             for i, y in enumerate(range(0, h, y_step)):
                 x_start = 0 if pattern == "Grid" or i % 2 == 0 else int(x_step / 2)
@@ -421,15 +415,15 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
             angle_rad = np.radians(num_angle)
             combined_w = (logo_img_clean.width + text_w)*np.cos(angle_rad)
             combined_h = (logo_img_clean.height + text_h)*np.cos(angle_rad)
-            x_step = int(combined_w * random.uniform(1.2, 1.8))
-            y_step = int(combined_h * random.uniform(1.2, 1.8))
+            x_step = int(combined_w * random.uniform(1.5, 1.8))
+            y_step = int(combined_h * random.uniform(1.5, 1.8))
             for i, y in enumerate(range(0, h, y_step)):
                 x_start = 0 if pattern == "Grid" or i % 2 == 0 else int(x_step / 2)
                 for x in range(x_start, w, x_step):##the same logic is applied here
                     x = int(x)
                     y = int(y)
                     center = (x + logo_img_clean.width // 2,y + logo_img_clean.height // 2)
-                    text_pos = np.array([center[0] + logo_img.width // 2, center[1] - text_img.height // 2])
+                    text_pos = np.array([center[0] + logo_img_clean.width // 2, center[1] - text_img.height // 2])
                     logo_pos = np.array([x, y])
 
                     # --- Shared center of virtual combined image ---
@@ -599,9 +593,9 @@ for i in range(1,46):
     filename = os.path.join(input_dir, f"{i}.jpg")
     if os.path.exists(filename):
         out_path = os.path.join(output_dir,f"{i}.jpg" )
-        content_type = random.choices(["Text", "Logo", "Both"],weights=[0.4,0.3,0.3])[0]
+        content_type = random.choices(["Text", "Logo", "Both"],weights=[0,0,1])[0]
         font = random.choice([cv2.FONT_HERSHEY_SIMPLEX, cv2.FONT_HERSHEY_COMPLEX, cv2.FONT_HERSHEY_SCRIPT_SIMPLEX])
-        location = random.choices(["Corner", "Medium", "Repetitive"], weights=[0,0 ,1])[0]
+        location = random.choices(["Corner", "Medium", "Repetitive"], weights=[0.3,0.4 ,0.3])[0]
         pattern = random.choices(["Diamond", "Grid"],weights=[0.5,0.5])[0] if location == "Repetitive" else None
         appearance = random.choices(["Transparent", "Semi-Transparent", "Opaque"], weights=[0.4, 0.4,0.3])[0]
         size = random.choice(["Small", "Medium", "Large"])
