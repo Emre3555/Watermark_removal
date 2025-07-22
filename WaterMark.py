@@ -6,11 +6,7 @@ import random
 import unicodedata
 import os
 import json
-<<<<<<< HEAD
-from math import sin, cos, radians,sqrt
-=======
-from math import sin, cos, tan, radians
->>>>>>> 025d0711986a0c69dfe5fa8ce7b824f3288560ff
+from math import sin, cos, tan, radians, sqrt
 
 FONT_PATH = "./msyh.ttc"
 INPUT_DIR = "./CarPhotos"
