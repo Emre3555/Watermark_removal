@@ -373,8 +373,23 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
                         for y in range(0, h, text_h + gap):
                             image = put_unicode_text(image, text, (curr_x, y), font_path, font_size, color, num_angle, opacity)
                             curr_x -= text_w + gap
+                elif num_angle == 0:
+                    for i, y in enumerate(range(0, h, y_step)):
+                        start_x = int(x_step/2)
+                        if i % 2:
+                            start_x = 0                            
+                        for x in range(start_x, w, x_step):
+                            image = put_unicode_text(image, text, (x, y), font_path, font_size, color, num_angle, opacity)
             elif pattern == "Grid":
-                if num_angle == 0:
+                if num_angle < 0:
+                    for i, y in enumerate(range(0, h, y_step)):
+                        for x in range(0, w, x_step):
+                            image = put_unicode_text(image, text, (x, y), font_path, font_size, color, num_angle, opacity)
+                elif num_angle > 0:
+                    for i, y in enumerate(range(0, h, y_step)):
+                        for x in range(0, w, x_step):
+                            image = put_unicode_text(image, text, (x, y), font_path, font_size, color, num_angle, opacity)
+                elif num_angle == 0:
                     for i, y in enumerate(range(0, h, y_step)):
                         for x in range(0, w, x_step):
                             image = put_unicode_text(image, text, (x, y), font_path, font_size, color, num_angle, opacity)
@@ -617,7 +632,7 @@ for i in range(1,46):
         angle = random.choices(["Inclined","non-inclined"],weights=[1,0])[0]
         color = random.choices([(255, 255, 255), (255, 0, 0), (0, 255, 0), (0, 0, 255)], weights=[0.7, 0.1, 0.1, 0.1])[0]
         gray_scale = random.choices([True,False],weights=[0.9,0.1])[0]
-        language,opacity = applyWaterMark(filename,out_path,"Text",location="Repetitive",pattern="Diamond",appearance=appearance,size=size,angle="Inclined",color=color,font=font,logo_files=logo_files,gray_scale=gray_scale)
+        language,opacity = applyWaterMark(filename,out_path,content_type,location=location,pattern=pattern,appearance=appearance,size=size,angle=angle,color=color,font=font,logo_files=logo_files,gray_scale=gray_scale)
         result,diff_ratio = compare_images(filename,out_path,1,0.05)
         metadata.append({
         "image_id": i,
