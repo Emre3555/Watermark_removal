@@ -6,7 +6,11 @@ import random
 import unicodedata
 import os
 import json
+<<<<<<< HEAD
 from math import sin, cos, radians,sqrt
+=======
+from math import sin, cos, tan, radians
+>>>>>>> 025d0711986a0c69dfe5fa8ce7b824f3288560ff
 
 FONT_PATH = "./msyh.ttc"
 INPUT_DIR = "./CarPhotos"
@@ -359,19 +363,33 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
     # Repetitive pattern
     if location == "Repetitive":
         image_pil = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB)).convert("RGBA")
-
+        
         if content_type == "Text":
             pil_font = ImageFont.truetype(font_path, font_size)
             bbox = pil_font.getbbox(text)
             text_w, text_h = bbox[2] - bbox[0], bbox[3] - bbox[1]
             x_step = int(text_w * random.uniform(1.5, 2.3))
             y_step = int(text_h * random.uniform(3, 3.8))
+            gap = int(text_w * random.uniform(0.1, 0.25))
 
-            for i, x in enumerate(range(0, 2*w, x_step)):
-                curr_x = x
-                for y in range(text_h, 2*h, text_h + 10):
-                    image = put_unicode_text(image, text, (curr_x, y), font_path, font_size, color, num_angle, opacity)
-                    curr_x -= text_w + 10
+            if pattern == "Diamond":
+                if num_angle < 0:
+                    for i, x in enumerate(range(2*int(-(h/tan(radians(-num_angle)))), w, x_step)):
+                        curr_x = x
+                        for y in range(0, h, text_h + gap):
+                            image = put_unicode_text(image, text, (curr_x, y), font_path, font_size, color, num_angle, opacity)
+                            curr_x += text_w + gap
+                elif num_angle > 0:
+                    for i, x in enumerate(range(w + 2*int(h/tan(radians(num_angle))), 0, -x_step)):
+                        curr_x = x
+                        for y in range(0, h, text_h + gap):
+                            image = put_unicode_text(image, text, (curr_x, y), font_path, font_size, color, num_angle, opacity)
+                            curr_x -= text_w + gap
+            elif pattern == "Grid":
+                if num_angle == 0:
+                    for i, y in enumerate(range(0, h, y_step)):
+                        for x in range(0, w, x_step):
+                            image = put_unicode_text(image, text, (x, y), font_path, font_size, color, num_angle, opacity)
 
         elif content_type == "Logo":
             # Convert OpenCV image to PIL RGBA
@@ -624,7 +642,11 @@ for i in range(1,46):
         angle = random.choices(["Inclined","non-inclined"],weights=[1,0])[0]
         color = random.choices([(255, 255, 255), (255, 0, 0), (0, 255, 0), (0, 0, 255)], weights=[0.7, 0.1, 0.1, 0.1])[0]
         gray_scale = random.choices([True,False],weights=[0.9,0.1])[0]
+<<<<<<< HEAD
         language,opacity = applyWaterMark(filename,out_path,content_type=content_type,location=location,pattern=pattern,appearance=appearance,size=size,angle=angle,color=color,font=font,logo_files=logo_files,gray_scale=gray_scale)
+=======
+        language,opacity = applyWaterMark(filename,out_path,"Text",location="Repetitive",pattern="Diamond",appearance=appearance,size=size,angle="Inclined",color=color,font=font,logo_files=logo_files,gray_scale=gray_scale)
+>>>>>>> 025d0711986a0c69dfe5fa8ce7b824f3288560ff
         result,diff_ratio = compare_images(filename,out_path,1,0.05)
         metadata.append({
         "image_id": i,
