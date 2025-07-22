@@ -6,13 +6,25 @@ import random
 import unicodedata
 import os
 import json
+<<<<<<< HEAD
+from math import sin, cos, radians,sqrt
+=======
 from math import sin, cos, tan, radians
+>>>>>>> 025d0711986a0c69dfe5fa8ce7b824f3288560ff
 
 FONT_PATH = "./msyh.ttc"
 INPUT_DIR = "./CarPhotos"
 OUTPUT_DIR = "./Output_Photos"
 LOGO_DIR = "./Logos"
 THIS_DIR = "./"
+
+def rotate_point_funct(pt, center, angle_deg):
+    angle_rad = np.radians(-angle_deg)
+    rotation_matrix = np.array([
+        [np.cos(angle_rad), -np.sin(angle_rad)],
+        [np.sin(angle_rad),  np.cos(angle_rad)]
+    ])
+    return (rotation_matrix @ (pt - center)) + center
 
 def rotate_image_opencv(pil_img, angle):
     # Convert PIL to NumPy array (RGBA)
@@ -274,7 +286,7 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
     text = ""
     languages_used = []
 
-
+    num_angle = 0  
     # Generate text if needed
     if content_type in ["Text", "Both"]:
         size1 = random.randint(5, 12)
@@ -314,7 +326,7 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
         "Opaque": random.uniform(0.8, 1.0)
     }[appearance]
     ###########################################################
-    num_angle = random.randint(-45, 45) if angle == "Inclined" else 0
+    num_angle = random.randint(-60, 30)if angle == "Inclined" else 0
 
     # Determine region size for safe placement
     if content_type == "Both":
@@ -403,10 +415,31 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
             r, g, b, a = logo_img_clean.split()
             new_alpha = a.point(lambda p: int(p * opacity))
             logo_img_clean.putalpha(new_alpha)# Multiply existing alpha with desired opacity
-            
+            if(angle == "Inclined"):
+                x = 0
+                y = 0
+                logo_w,logo_h = logo_img_clean.size
+                ##in this part minumum y difference is calulated by geometry.
+                #first x and y differences of corners of the logo is found
+                #then numerical value is calculated from geometic formula.
+                center = np.array([x + logo_w/2,y + logo_h/2])
+                topleft = np.array([x,y])
+                topright = np.array([x+logo_w,y])
+                bottom_left = np.array([x,y+logo_h])
+                rotated_topleft = rotate_point_funct(topleft,center,num_angle)
+                rotated_bottom_left = rotate_point_funct(bottom_left,center,num_angle)
+                rotated_topright = rotate_point_funct(topright,center,num_angle)
+                x_diff = abs(rotated_topleft[0]-rotated_bottom_left[0])
+                y_diff = abs(rotated_topleft[1]-rotated_bottom_left[1]) 
+                min_y_step = pow(x_diff,2)/y_diff
+                min_y_step += y_diff
+                x_diff = abs(rotated_topright[0]-rotated_topleft[0])
+                y_diff = abs(rotated_topright[1]-rotated_topleft[1])
+                min_x_step = sqrt(pow(x_diff,2)+ pow(y_diff,2))
+                logo_img_clean = logo_img_clean.rotate(num_angle,resample=Image.BICUBIC,expand=True)
 
-            x_step = int(region_w * random.uniform(1.2, 1.8))
-            y_step = int(region_h * random.uniform(1.4, 2))
+            x_step = int(min_x_step * random.uniform(1.2, 1.8))
+            y_step = int(min_y_step * random.uniform(1.2, 1.8))
 
             for i, y in enumerate(range(0, h, y_step)):
                 x_start = 0 if pattern == "Grid" or i % 2 == 0 else int(x_step / 2)
@@ -570,14 +603,6 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
         combined_height = max(logo_img_clean.height, text_img.height)
         shared_center = np.array([x + combined_width // 2, y + combined_height // 2])
 
-        def rotate_point(pt, center, angle_deg):
-            angle_rad = np.radians(-angle_deg)
-            rotation_matrix = np.array([
-                [np.cos(angle_rad), -np.sin(angle_rad)],
-                [np.sin(angle_rad),  np.cos(angle_rad)]
-            ])
-            return (rotation_matrix @ (pt - center)) + center
-
         if angle == "Inclined":
             # Rotate logo
             logo_center_abs = logo_pos + np.array(logo_img_clean.size) / 2
@@ -623,10 +648,10 @@ for i in range(1,46):
     filename = os.path.join(input_dir, f"{i}.jpg")
     if os.path.exists(filename):
         out_path = os.path.join(output_dir,f"{i}.jpg" )
-        content_type = random.choices(["Text", "Logo", "Both"],weights=[0,0,1])[0]
+        content_type = random.choices(["Text", "Logo", "Both"],weights=[0,1,0])[0]
         font = random.choice([cv2.FONT_HERSHEY_SIMPLEX, cv2.FONT_HERSHEY_COMPLEX, cv2.FONT_HERSHEY_SCRIPT_SIMPLEX])
-        location = random.choices(["Corner", "Medium", "Repetitive"], weights=[0.3,0.4 ,0.3])[0]
-        pattern = random.choices(["Diamond", "Grid"],weights=[0.5,0.5])[0] if location == "Repetitive" else None
+        location = random.choices(["Corner", "Medium", "Repetitive"], weights=[0,0 ,1])[0]
+        pattern = random.choices(["Diamond", "Grid"],weights=[1,0]) if location == "Repetitive" else None
         appearance = random.choices(["Transparent", "Semi-Transparent", "Opaque"], weights=[0.4, 0.4,0.3])[0]
         size = random.choice(["Small", "Medium", "Large"])
         angle = random.choices(["Inclined","non-inclined"],weights=[1,0])[0]
