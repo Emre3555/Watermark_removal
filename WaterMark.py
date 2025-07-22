@@ -80,7 +80,7 @@ def convert_to_grayscale(img: Image.Image, save_path=None):
         gray_rgba.save(save_path)
     return gray_rgba
 
-#Fallowing two functions are the same bout one of them takes path as input and the other is image
+#Following two functions are the same but one of them takes path as input and the other is image
 def crop_alpha(img):
     alpha = img.getchannel("A")
     bbox = alpha.getbbox()
@@ -327,9 +327,9 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
             target_logo_height = int(text_h * random.uniform(2, 3))
             target_logo_width = int(logo_w * (target_logo_height / logo_h))
             logo_img = logo_img.resize((target_logo_width, target_logo_height), Image.Resampling.LANCZOS)
-        # Match logo height to text height with a slight multiplier (optional)
-        region_w = target_logo_width + text_w + 10
-        region_h = max(target_logo_height, text_h)
+            # Match logo height to text height with a slight multiplier (optional)
+            region_w = target_logo_width + text_w + 10
+            region_h = max(target_logo_height, text_h)
 
     elif content_type == "Text":
         pil_font = ImageFont.truetype(font_path, font_size)
@@ -359,10 +359,11 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
             x_step = int(text_w * random.uniform(1.5, 2.3))
             y_step = int(text_h * random.uniform(3, 3.8))
 
-            for i, y in enumerate(range(0, h, y_step)):
-                x_start = 0 if pattern == "Grid" or i % 2 == 0 else int(x_step / 2)
-                for x in range(x_start, w, x_step):
-                    image = put_unicode_text(image, text, (x, y), font_path, font_size, color, num_angle, opacity)
+            for i, x in enumerate(range(0, 2*w, x_step)):
+                curr_x = x
+                for y in range(text_h, 2*h, text_h + 10):
+                    image = put_unicode_text(image, text, (curr_x, y), font_path, font_size, color, num_angle, opacity)
+                    curr_x -= text_w + 10
 
         elif content_type == "Logo":
             # Convert OpenCV image to PIL RGBA
@@ -602,7 +603,7 @@ for i in range(1,46):
         angle = random.choices(["Inclined","non-inclined"],weights=[1,0])[0]
         color = random.choices([(255, 255, 255), (255, 0, 0), (0, 255, 0), (0, 0, 255)], weights=[0.7, 0.1, 0.1, 0.1])[0]
         gray_scale = random.choices([True,False],weights=[0.9,0.1])[0]
-        language,opacity = applyWaterMark(filename,out_path,content_type,location=location,pattern=pattern,appearance=appearance,size=size,angle=angle,color=color,font=font,logo_files=logo_files,gray_scale=gray_scale)
+        language,opacity = applyWaterMark(filename,out_path,"Text",location="Repetitive",pattern="Diamond",appearance=appearance,size=size,angle=angle,color=color,font=font,logo_files=logo_files,gray_scale=gray_scale)
         result,diff_ratio = compare_images(filename,out_path,1,0.05)
         metadata.append({
         "image_id": i,
