@@ -389,19 +389,11 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
                         for x in range(start_x, w, x_step):
                             image = put_unicode_text(image, text, (x, y), font_path, font_size, color, num_angle, opacity)
             elif pattern == "Grid":
-                if num_angle < 0:
-                    for i, y in enumerate(range(0, h, y_step)):
+                for i, y in enumerate(range(0, h, y_step)):
                         for x in range(0, w, x_step):
                             image = put_unicode_text(image, text, (x, y), font_path, font_size, color, num_angle, opacity)
-                elif num_angle > 0:
-                    for i, y in enumerate(range(0, h, y_step)):
-                        for x in range(0, w, x_step):
-                            image = put_unicode_text(image, text, (x, y), font_path, font_size, color, num_angle, opacity)
-                elif num_angle == 0:
-                    for i, y in enumerate(range(0, h, y_step)):
-                        for x in range(0, w, x_step):
-                            image = put_unicode_text(image, text, (x, y), font_path, font_size, color, num_angle, opacity)
-
+                            
+                    
         elif content_type == "Logo":
             # Convert OpenCV image to PIL RGBA
             image_pil = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB)).convert("RGBA")
