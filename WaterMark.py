@@ -323,7 +323,8 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
         "Opaque": random.uniform(0.8, 1.0)
     }[appearance]
     ###########################################################
-    num_angle = random.randint(-60, 30)if angle == "Inclined" else 0
+    #num_angle = random.randint(-60, 30)if angle == "Inclined" else 0
+    num_angle = 1
 
     # Determine region size for safe placement
     if content_type == "Both":
@@ -365,28 +366,31 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
             pil_font = ImageFont.truetype(font_path, font_size)
             bbox = pil_font.getbbox(text)
             text_w, text_h = bbox[2] - bbox[0], bbox[3] - bbox[1]
-            x_step = int(text_w * random.uniform(1.5, 2.3))
-            y_step = int(text_h * random.uniform(3, 3.8))
+            x_step = int(text_w * random.uniform(1.5, 2.0))
+            y_step = int(text_h * random.uniform(1.7, 2.3))
             gap = int(text_w * 0.25)
 
-            if pattern == "Diamond":
-                if num_angle < 0:
-                    for i, x in enumerate(range(5*int(-(h/tan(radians(-num_angle)))), w, x_step)):
+            if (pattern[0] == "Diamond" and angle == "Inclined" and (num_angle < -10 or num_angle > 10)):
+                if num_angle < -10:
+                    start_x = 2 * int(-(h / tan(radians(-num_angle))))
+                    for i, x in enumerate(range(start_x, w, x_step)):
                         curr_x = x
-                        for y in range(0, 2*h, text_h + gap):
+                        for j, y in enumerate(range(0, h, int(y_step + gap))):
                             image = put_unicode_text(image, text, (curr_x, y), font_path, font_size, color, num_angle, opacity)
-                            curr_x += text_w + gap
-                elif num_angle > 0:
-                    for i, x in enumerate(range(w + 5*int(h/tan(radians(num_angle))), 0, -x_step)):
+                            curr_x += x_step + gap
+                elif num_angle > 10:
+                    start_x = w + 2 * int(h / tan(radians(num_angle)))
+                    for i, x in enumerate(range(start_x, 0, -x_step)):
                         curr_x = x
-                        for y in range(0, 2*h, text_h + gap):
+                        for j, y in enumerate(range(0, h, int(y_step + gap))):
                             image = put_unicode_text(image, text, (curr_x, y), font_path, font_size, color, num_angle, opacity)
-                            curr_x -= text_w + gap
-            elif pattern == "Grid":
-                if num_angle == 0:
-                    for i, y in enumerate(range(0, h, y_step)):
-                        for x in range(0, w, x_step):
-                            image = put_unicode_text(image, text, (x, y), font_path, font_size, color, num_angle, opacity)
+                            curr_x -= x_step + gap
+            else:
+                for i, y in enumerate(range(0, h, y_step)):
+                    x_start = 0 if pattern == "Grid" or i % 2 == 0 else int(x_step / 2)
+                    for x in range(x_start, w, x_step):
+                        image = put_unicode_text(image, text, (x, y), font_path, font_size, color, num_angle, opacity)
+
 
         elif content_type == "Logo":
             # Convert OpenCV image to PIL RGBA
@@ -647,7 +651,7 @@ for i in range(1,46):
     filename = os.path.join(input_dir, f"{i}.jpg")
     if os.path.exists(filename):
         out_path = os.path.join(output_dir,f"{i}.jpg" )
-        content_type = random.choices(["Text", "Logo", "Both"],weights=[0,1,0])[0]
+        content_type = random.choices(["Text", "Logo", "Both"],weights=[1,0,0])[0]
         font = random.choice([cv2.FONT_HERSHEY_SIMPLEX, cv2.FONT_HERSHEY_COMPLEX, cv2.FONT_HERSHEY_SCRIPT_SIMPLEX])
         location = random.choices(["Corner", "Medium", "Repetitive"], weights=[0,0,1])[0]
         pattern = random.choices(["Diamond", "Grid"],weights=[1,0]) if location == "Repetitive" else None
