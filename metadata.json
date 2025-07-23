@@ -62,7 +62,7 @@
             "language": [
                 "Greek"
             ],
-            "font": 0
+            "font": 6
         },
         "location": "Repetitive",
         "pattern": [
@@ -72,7 +72,7 @@
             "Transparent",
             0.6473871821754242
         ],
-        "size": "Small",
+        "size": "Large",
         "angle": "Inclined",
         "color": [
             255,
@@ -88,9 +88,9 @@
         "content": {
             "type": "Text",
             "language": [
-                "Latin"
+                "Chinese"
             ],
-            "font": 6
+            "font": 0
         },
         "location": "Repetitive",
         "pattern": [
@@ -145,8 +145,9 @@
             "type": "Text",
             "language": [
                 "Chinese"
+                "Chinese"
             ],
-            "font": 0
+            "font": 3
         },
         "location": "Repetitive",
         "pattern": [
@@ -203,6 +204,7 @@
                 "Chinese"
             ],
             "font": 3
+            "font": 3
         },
         "location": "Repetitive",
         "pattern": [
@@ -257,6 +259,7 @@
             "type": "Text",
             "language": [
                 "Latin"
+                "Latin"
             ],
             "font": 3
         },
@@ -268,6 +271,7 @@
             "Semi-Transparent",
             0.7290663969270486
         ],
+        "size": "Medium",
         "size": "Medium",
         "angle": "Inclined",
         "color": [
@@ -312,7 +316,7 @@
         "content": {
             "type": "Text",
             "language": [
-                "Latin"
+                "Cyrillic"
             ],
             "font": 6
         },
@@ -353,6 +357,7 @@
             0.7291492109555925
         ],
         "size": "Medium",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
             255,
@@ -368,8 +373,10 @@
         "content": {
             "type": "Text",
             "language": [
-                "Latin"
+                "Latin",
+                "Greek"
             ],
+            "font": 3
             "font": 3
         },
         "location": "Repetitive",
@@ -380,7 +387,7 @@
             "Transparent",
             0.66596989469308
         ],
-        "size": "Medium",
+        "size": "Small",
         "angle": "Inclined",
         "color": [
             255,
@@ -425,7 +432,9 @@
             "type": "Text",
             "language": [
                 "Latin"
+                "Latin"
             ],
+            "font": 3
             "font": 3
         },
         "location": "Repetitive",
@@ -455,6 +464,7 @@
                 "Cyrillic"
             ],
             "font": 6
+            "font": 6
         },
         "location": "Repetitive",
         "pattern": [
@@ -464,7 +474,7 @@
             "Transparent",
             0.6681437285712166
         ],
-        "size": "Medium",
+        "size": "Large",
         "angle": "Inclined",
         "color": [
             255,
@@ -480,8 +490,10 @@
         "content": {
             "type": "Text",
             "language": [
-                "Latin"
+                "Latin",
+                "Chinese"
             ],
+            "font": 0
             "font": 0
         },
         "location": "Repetitive",
@@ -493,11 +505,12 @@
             0.8483981300092603
         ],
         "size": "Medium",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
+            0,
             255,
-            255,
-            255
+            0
         ],
         "Success": false,
         "Difference Percentage": 58.236111111111114,
@@ -508,7 +521,7 @@
         "content": {
             "type": "Text",
             "language": [
-                "Latin"
+                "Chinese"
             ],
             "font": 6
         },
@@ -520,7 +533,7 @@
             "Transparent",
             0.631333106941011
         ],
-        "size": "Large",
+        "size": "Small",
         "angle": "Inclined",
         "color": [
             255,
@@ -537,6 +550,7 @@
             "type": "Text",
             "language": [
                 "Latin"
+                "Latin"
             ],
             "font": 3
         },
@@ -551,8 +565,8 @@
         "size": "Large",
         "angle": "Inclined",
         "color": [
-            255,
-            255,
+            0,
+            0,
             255
         ],
         "Success": false,
@@ -577,6 +591,7 @@
             0.794586523276097
         ],
         "size": "Medium",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
             255,
@@ -594,7 +609,7 @@
             "language": [
                 "Latin"
             ],
-            "font": 0
+            "font": 3
         },
         "location": "Repetitive",
         "pattern": [
@@ -610,6 +625,8 @@
             255,
             255,
             255
+            255,
+            255
         ],
         "Success": false,
         "Difference Percentage": 63.39619638736374,
@@ -620,7 +637,7 @@
         "content": {
             "type": "Text",
             "language": [
-                "Latin"
+                "Chinese"
             ],
             "font": 6
         },
@@ -651,6 +668,7 @@
                 "Cyrillic"
             ],
             "font": 6
+            "font": 6
         },
         "location": "Repetitive",
         "pattern": [
@@ -660,11 +678,11 @@
             "Opaque",
             0.8175036235936042
         ],
-        "size": "Medium",
+        "size": "Small",
         "angle": "Inclined",
         "color": [
-            255,
-            255,
+            0,
+            0,
             255
         ],
         "Success": false,
@@ -704,9 +722,9 @@
         "content": {
             "type": "Text",
             "language": [
-                "Latin"
+                "Chinese"
             ],
-            "font": 3
+            "font": 0
         },
         "location": "Repetitive",
         "pattern": [
@@ -732,7 +750,7 @@
         "content": {
             "type": "Text",
             "language": [
-                "Greek"
+                "Latin"
             ],
             "font": 3
         },
@@ -773,6 +791,7 @@
             0.8021467457545712
         ],
         "size": "Small",
+        "size": "Small",
         "angle": "Inclined",
         "color": [
             0,
@@ -789,7 +808,9 @@
             "type": "Text",
             "language": [
                 "Latin"
+                "Latin"
             ],
+            "font": 0
             "font": 0
         },
         "location": "Repetitive",
@@ -803,8 +824,8 @@
         "size": "Large",
         "angle": "Inclined",
         "color": [
-            255,
-            255,
+            0,
+            0,
             255
         ],
         "Success": false,
@@ -818,7 +839,7 @@
             "language": [
                 "Greek"
             ],
-            "font": 6
+            "font": 0
         },
         "location": "Repetitive",
         "pattern": [
@@ -828,7 +849,7 @@
             "Opaque",
             0.9068475576204449
         ],
-        "size": "Small",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
             0,
@@ -859,9 +880,9 @@
         "size": "Large",
         "angle": "Inclined",
         "color": [
+            0,
             255,
-            255,
-            255
+            0
         ],
         "Success": false,
         "Difference Percentage": 66.70436507936508,
@@ -874,6 +895,7 @@
             "language": [
                 "Latin"
             ],
+            "font": 0
             "font": 0
         },
         "location": "Repetitive",
@@ -915,8 +937,8 @@
         "size": "Medium",
         "angle": "Inclined",
         "color": [
-            255,
-            255,
+            0,
+            0,
             255
         ],
         "Success": false,
@@ -931,7 +953,7 @@
                 "Latin",
                 "Chinese"
             ],
-            "font": 0
+            "font": 3
         },
         "location": "Repetitive",
         "pattern": [
@@ -945,8 +967,8 @@
         "angle": "Inclined",
         "color": [
             255,
-            255,
-            255
+            0,
+            0
         ],
         "Success": false,
         "Difference Percentage": 41.605158730158735,
@@ -955,11 +977,9 @@
     {
         "image_id": 35,
         "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 0
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
@@ -987,6 +1007,7 @@
             "language": [
                 "Greek"
             ],
+            "font": 0
             "font": 0
         },
         "location": "Repetitive",
@@ -1016,6 +1037,7 @@
                 "Latin"
             ],
             "font": 0
+            "font": 0
         },
         "location": "Repetitive",
         "pattern": [
@@ -1025,7 +1047,7 @@
             "Opaque",
             0.825350792446709
         ],
-        "size": "Large",
+        "size": "Small",
         "angle": "Inclined",
         "color": [
             0,
@@ -1043,6 +1065,7 @@
             "language": [
                 "Latin"
             ],
+            "font": 0
             "font": 0
         },
         "location": "Repetitive",
@@ -1069,8 +1092,10 @@
         "content": {
             "type": "Text",
             "language": [
-                "Latin"
+                "Latin",
+                "Chinese"
             ],
+            "font": 3
             "font": 3
         },
         "location": "Repetitive",
@@ -1081,6 +1106,7 @@
             "Opaque",
             0.9014559408170898
         ],
+        "size": "Large",
         "size": "Large",
         "angle": "Inclined",
         "color": [
@@ -1097,7 +1123,7 @@
         "content": {
             "type": "Text",
             "language": [
-                "Latin"
+                "Greek"
             ],
             "font": 3
         },
@@ -1109,7 +1135,7 @@
             "Opaque",
             0.9732341404136859
         ],
-        "size": "Large",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
             255,
@@ -1126,8 +1152,9 @@
             "type": "Text",
             "language": [
                 "Latin"
+                "Latin"
             ],
-            "font": 6
+            "font": 3
         },
         "location": "Repetitive",
         "pattern": [
@@ -1155,7 +1182,7 @@
             "language": [
                 "Latin"
             ],
-            "font": 0
+            "font": 3
         },
         "location": "Repetitive",
         "pattern": [
@@ -1181,8 +1208,9 @@
         "content": {
             "type": "Text",
             "language": [
-                "Latin"
+                "Chinese"
             ],
+            "font": 3
             "font": 3
         },
         "location": "Repetitive",
@@ -1194,11 +1222,12 @@
             0.7384319116822091
         ],
         "size": "Medium",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
+            0,
             255,
-            255,
-            255
+            0
         ],
         "Success": false,
         "Difference Percentage": 49.92042651388557,
