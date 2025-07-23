@@ -323,8 +323,7 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
         "Opaque": random.uniform(0.8, 1.0)
     }[appearance]
     ###########################################################
-    #num_angle = random.randint(-60, 30)if angle == "Inclined" else 0
-    num_angle = 1
+    num_angle = random.randint(-60, 30)if angle == "Inclined" else 0
 
     # Determine region size for safe placement
     if content_type == "Both":
