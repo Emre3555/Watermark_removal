@@ -283,7 +283,7 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
     text = ""
     languages_used = []
 
-    num_angle = 0
+    num_angle = 0  
     # Generate text if needed
     if content_type in ["Text", "Both"]:
         size1 = random.randint(5, 12)
@@ -323,7 +323,11 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
         "Opaque": random.uniform(0.8, 1.0)
     }[appearance]
     ###########################################################
-    num_angle = random.randint(-45, 45) if angle == "Inclined" else 0
+    num_angle1 = random.randint(-45, -30)if angle == "Inclined" else 0
+    num_angle2 = random.randint(30, 45)if angle == "Inclined" else 0
+    choose = random.randint(1, 2)
+    num_angle = num_angle1 if choose == 1 else num_angle2
+    num_angle = random.randint(-45,45)
 
     # Determine region size for safe placement
     if content_type == "Both":
@@ -369,15 +373,15 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
             y_step = int(text_h * random.uniform(1.7, 2.3))
             gap = int(text_w * 0.25)
 
-            if (pattern[0] == "Diamond" and angle == "Inclined" and (num_angle < -15 or num_angle > 15)):
-                if num_angle < -15:
+            if (pattern[0] == "Diamond" and angle == "Inclined" and (num_angle < -10 or num_angle > 10)):
+                if num_angle < -10:
                     start_x = 2 * int(-(h / tan(radians(-num_angle))))
                     for i, x in enumerate(range(start_x, w, x_step)):
                         curr_x = x
                         for y in range(0, h, text_h + gap):
                             image = put_unicode_text(image, text, (curr_x, y), font_path, font_size, color, num_angle, opacity)
                             curr_x += x_step + gap
-                elif num_angle > 15:
+                elif num_angle > 10:
                     start_x = w + 2 * int(h / tan(radians(num_angle)))
                     for i, x in enumerate(range(start_x, 0, -x_step)):
                         curr_x = x
@@ -400,46 +404,59 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
             logo_img_clean.putalpha(new_alpha)# Multiply existing alpha with desired opacity
             min_x_step,min_y_step = logo_img_clean.size
             if(angle == "Inclined"):
-                x = 0
-                y = 0
-                logo_w,logo_h = logo_img_clean.size
-                ##in this part minumum y difference is calulated by geometry.
-                #first x and y differences of corners of the logo is found
-                #then numerical value is calculated from geometic formula.
-                center = np.array([x + logo_w/2,y + logo_h/2])
-                topleft = np.array([x,y])
-                topright = np.array([x+logo_w,y])
-                bottom_left = np.array([x,y+logo_h])
-                rotated_topleft = rotate_point_funct(topleft,center,num_angle)
-                rotated_bottom_left = rotate_point_funct(bottom_left,center,num_angle)
-                rotated_topright = rotate_point_funct(topright,center,num_angle)
-                x_diff = abs(rotated_topleft[0]-rotated_bottom_left[0])
-                y_diff = abs(rotated_topleft[1]-rotated_bottom_left[1]) 
-                min_y_step = pow(x_diff,2) / y_diff
-                min_y_step += y_diff
-                x_diff = abs(rotated_topright[0]-rotated_topleft[0])
-                y_diff = abs(rotated_topright[1]-rotated_topleft[1])
-                min_x_step = sqrt(pow(x_diff,2)+ pow(y_diff,2))
-                logo_img_clean = logo_img_clean.rotate(num_angle,resample=Image.BICUBIC,expand=True)
-
+                if(num_angle > 0):
+                    x = 0
+                    y = 0
+                    logo_w,logo_h = logo_img_clean.size
+                    ##in this part minumum y difference is calulated by geometry.
+                    #first x and y differences of corners of the logo is found
+                    #then numerical value is calculated from geometic formula.
+                    center = np.array([x + logo_w/2,y + logo_h/2])
+                    topleft = np.array([x,y])
+                    topright = np.array([x+logo_w,y])
+                    bottom_left = np.array([x,y+logo_h])
+                    rotated_topleft = rotate_point_funct(topleft,center,num_angle)
+                    rotated_bottom_left = rotate_point_funct(bottom_left,center,num_angle)
+                    rotated_topright = rotate_point_funct(topright,center,num_angle)
+                    x_diff = abs(rotated_topleft[0]-rotated_bottom_left[0])
+                    y_diff = abs(rotated_topleft[1]-rotated_bottom_left[1]) 
+                    min_y_step = pow(x_diff,2) / y_diff
+                    min_y_step += y_diff
+                    x_diff = abs(rotated_topright[0]-rotated_topleft[0])
+                    y_diff = abs(rotated_topright[1]-rotated_topleft[1])
+                    min_x_step = sqrt(pow(x_diff,2)+ pow(y_diff,2))
+                else:
+                    x = 0
+                    y = 0
+                    logo_w,logo_h = logo_img_clean.size
+                    center = np.array([x + logo_w/2,y + logo_h/2])
+                    topleft = np.array([x,y])
+                    bottom_right = np.array([x+logo_w,y+logo_h])
+                    rotated_topleft = rotate_point_funct(topleft,center,num_angle)
+                    rotated_bottom_right = rotate_point_funct(bottom_right,center,num_angle)
+                    min_y_step = abs(rotated_topleft[1] - rotated_bottom_right[1])
+                    topright = np.array([x+logo_w,y])
+                    rotated_topright = rotate_point_funct(topright,center,num_angle)
+                    min_x_step = abs(rotated_topleft[0] - rotated_topright[0])
+            logo_img_clean = logo_img_clean.rotate(num_angle,resample=Image.BICUBIC,expand=True)
             x_step = int(min_x_step * random.uniform(1, 1))
             y_step = int(min_y_step * random.uniform(1, 1))
-            gap = int(min_x_step*random.uniform(0.1,0.25))
+            gap1 = int(min_x_step*random.uniform(0.25,0.35))
             if (pattern[0] == "Diamond" and angle == "Inclined"):
                 if num_angle < 0:
                     start_x = 2 * int(-(h / tan(radians(-num_angle))))
-                    for i, x in enumerate(range(start_x, w, x_step)):
+                    for i, x in enumerate(range(start_x,2* w, x_step + gap1)):
                         curr_x = x
-                        for j, y in enumerate(range(0, h, int(y_step))):
+                        for j, y in enumerate(range(0, 2*h, int(y_step))):
                             image_pil.paste(logo_img_clean, (int(curr_x), int(y)), logo_img_clean)
-                            curr_x += x_step + gap
+                            curr_x += x_step
                 elif num_angle > 0:
                     start_x = w + 2 * int(h / tan(radians(num_angle)))
-                    for i, x in enumerate(range(start_x, 0, -x_step)):
+                    for i, x in enumerate(range(start_x, -w, -x_step-gap1)):
                         curr_x = x
-                        for j, y in enumerate(range(0, h, int(y_step))):
+                        for j, y in enumerate(range(0, 2*h, int(y_step))):
                             image_pil.paste(logo_img_clean, (int(curr_x), int(y)), logo_img_clean)
-                            curr_x -= x_step + gap
+                            curr_x -= x_step
             else:
                 for i, y in enumerate(range(0, h, y_step)):
                     x_start = 0 if pattern == "Grid" or i % 2 == 0 else int(x_step / 2)

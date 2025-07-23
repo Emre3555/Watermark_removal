@@ -2,21 +2,19 @@
     {
         "image_id": 1,
         "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 3
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
             "Diamond"
         ],
         "appearance": [
-            "Semi-Transparent",
-            0.7816618194031679
+            "Transparent",
+            0.6563250398461693
         ],
-        "size": "Large",
+        "size": "Small",
         "angle": "Inclined",
         "color": [
             255,
@@ -24,27 +22,25 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 42.10432190760059,
-        "GrayScale": null
+        "Difference Percentage": 48.42126179831098,
+        "GrayScale": true
     },
     {
         "image_id": 2,
         "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 6
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
             "Diamond"
         ],
         "appearance": [
-            "Semi-Transparent",
-            0.7436738680164947
+            "Opaque",
+            0.802234355218146
         ],
-        "size": "Medium",
+        "size": "Large",
         "angle": "Inclined",
         "color": [
             255,
@@ -52,17 +48,15 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 47.84559787141098,
-        "GrayScale": null
+        "Difference Percentage": 8.18672808863826,
+        "GrayScale": true
     },
     {
         "image_id": 3,
         "content": {
-            "type": "Text",
-            "language": [
-                "Greek"
-            ],
-            "font": 6
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
@@ -70,27 +64,25 @@
         ],
         "appearance": [
             "Transparent",
-            0.6473871821754242
+            0.6989581106081612
         ],
         "size": "Large",
         "angle": "Inclined",
         "color": [
             255,
-            0,
-            0
+            255,
+            255
         ],
         "Success": false,
-        "Difference Percentage": 94.59432612841704,
-        "GrayScale": null
+        "Difference Percentage": 28.138906547997454,
+        "GrayScale": false
     },
     {
         "image_id": 4,
         "content": {
-            "type": "Text",
-            "language": [
-                "Chinese"
-            ],
-            "font": 0
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
@@ -98,9 +90,9 @@
         ],
         "appearance": [
             "Transparent",
-            0.6091984346833106
+            0.6525360129893659
         ],
-        "size": "Small",
+        "size": "Large",
         "angle": "Inclined",
         "color": [
             255,
@@ -108,46 +100,41 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 86.96870342771982,
-        "GrayScale": null
+        "Difference Percentage": 74.67660208643815,
+        "GrayScale": true
     },
     {
         "image_id": 5,
         "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 6
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
             "Diamond"
         ],
         "appearance": [
-            "Semi-Transparent",
-            0.7061388234335517
+            "Transparent",
+            0.6090100663444115
         ],
-        "size": "Medium",
+        "size": "Large",
         "angle": "Inclined",
         "color": [
+            0,
             255,
-            255,
-            255
+            0
         ],
         "Success": false,
-        "Difference Percentage": 75.72458029775103,
-        "GrayScale": null
+        "Difference Percentage": 33.69100411783339,
+        "GrayScale": true
     },
     {
         "image_id": 6,
         "content": {
-            "type": "Text",
-            "language": [
-                "Chinese"
-                "Chinese"
-            ],
-            "font": 3
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
@@ -155,7 +142,7 @@
         ],
         "appearance": [
             "Opaque",
-            0.9687503505522126
+            0.9556100693727845
         ],
         "size": "Small",
         "angle": "Inclined",
@@ -165,17 +152,15 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 54.85212753253991,
-        "GrayScale": null
+        "Difference Percentage": 55.52481789595192,
+        "GrayScale": true
     },
     {
         "image_id": 7,
         "content": {
-            "type": "Text",
-            "language": [
-                "Greek"
-            ],
-            "font": 3
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
@@ -183,142 +168,129 @@
         ],
         "appearance": [
             "Opaque",
-            0.954723107256264
+            0.9127972925109135
         ],
-        "size": "Small",
+        "size": "Large",
         "angle": "Inclined",
         "color": [
-            0,
             255,
+            0,
             0
         ],
         "Success": false,
-        "Difference Percentage": 98.43452380952381,
-        "GrayScale": null
+        "Difference Percentage": 30.198412698412696,
+        "GrayScale": true
     },
     {
         "image_id": 8,
         "content": {
-            "type": "Text",
-            "language": [
-                "Chinese"
-            ],
-            "font": 3
-            "font": 3
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
             "Diamond"
         ],
         "appearance": [
-            "Semi-Transparent",
-            0.7175657310852819
+            "Transparent",
+            0.6434053362811061
         ],
-        "size": "Medium",
+        "size": "Large",
         "angle": "Inclined",
         "color": [
-            0,
             255,
-            0
+            255,
+            255
         ],
         "Success": false,
-        "Difference Percentage": 48.55412115193645,
-        "GrayScale": null
+        "Difference Percentage": 30.58589870903674,
+        "GrayScale": true
     },
     {
         "image_id": 9,
         "content": {
-            "type": "Text",
-            "language": [
-                "Chinese"
-            ],
-            "font": 0
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
             "Diamond"
         ],
         "appearance": [
-            "Transparent",
-            0.6673195111476428
+            "Semi-Transparent",
+            0.7523085390998112
         ],
-        "size": "Large",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
-            0,
-            0,
+            255,
+            255,
             255
         ],
         "Success": false,
-        "Difference Percentage": 65.29160457029309,
-        "GrayScale": null
+        "Difference Percentage": 30.02483854942871,
+        "GrayScale": true
     },
     {
         "image_id": 10,
         "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-                "Latin"
-            ],
-            "font": 3
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
             "Diamond"
         ],
         "appearance": [
-            "Semi-Transparent",
-            0.7290663969270486
+            "Transparent",
+            0.610960441809992
         ],
-        "size": "Medium",
-        "size": "Medium",
+        "size": "Large",
         "angle": "Inclined",
         "color": [
             255,
-            0,
-            0
+            255,
+            255
         ],
         "Success": false,
-        "Difference Percentage": 74.88325881768505,
-        "GrayScale": null
+        "Difference Percentage": 48.15896671634376,
+        "GrayScale": true
     },
     {
         "image_id": 11,
         "content": {
-            "type": "Text",
-            "language": [
-                "Chinese"
-            ],
-            "font": 6
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
             "Diamond"
         ],
         "appearance": [
-            "Semi-Transparent",
-            0.772634004740811
+            "Opaque",
+            0.8645705449968595
         ],
         "size": "Large",
         "angle": "Inclined",
         "color": [
-            0,
             255,
-            0
+            255,
+            255
         ],
         "Success": false,
-        "Difference Percentage": 58.12801018986586,
-        "GrayScale": null
+        "Difference Percentage": 20.60860566015205,
+        "GrayScale": true
     },
     {
         "image_id": 12,
         "content": {
-            "type": "Text",
-            "language": [
-                "Cyrillic"
-            ],
-            "font": 6
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
@@ -326,9 +298,9 @@
         ],
         "appearance": [
             "Semi-Transparent",
-            0.7158282545314494
+            0.7160388393933295
         ],
-        "size": "Small",
+        "size": "Large",
         "angle": "Inclined",
         "color": [
             255,
@@ -336,28 +308,25 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 53.9702380952381,
-        "GrayScale": null
+        "Difference Percentage": 13.61904761904762,
+        "GrayScale": true
     },
     {
         "image_id": 13,
         "content": {
-            "type": "Text",
-            "language": [
-                "Cyrillic"
-            ],
-            "font": 0
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
             "Diamond"
         ],
         "appearance": [
-            "Semi-Transparent",
-            0.7291492109555925
+            "Transparent",
+            0.6178160980499384
         ],
-        "size": "Medium",
-        "size": "Medium",
+        "size": "Small",
         "angle": "Inclined",
         "color": [
             255,
@@ -365,19 +334,15 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 63.62252362687334,
-        "GrayScale": null
+        "Difference Percentage": 48.06042152714619,
+        "GrayScale": true
     },
     {
         "image_id": 14,
         "content": {
-            "type": "Text",
-            "language": [
-                "Latin",
-                "Greek"
-            ],
-            "font": 3
-            "font": 3
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
@@ -385,9 +350,9 @@
         ],
         "appearance": [
             "Transparent",
-            0.66596989469308
+            0.6258711713641324
         ],
-        "size": "Small",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
             255,
@@ -395,27 +360,25 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 68.84649776453055,
-        "GrayScale": null
+        "Difference Percentage": 8.848484848484848,
+        "GrayScale": true
     },
     {
         "image_id": 15,
         "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 0
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
             "Diamond"
         ],
         "appearance": [
-            "Semi-Transparent",
-            0.7130388530472388
+            "Opaque",
+            0.9596153005752499
         ],
-        "size": "Large",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
             0,
@@ -423,48 +386,41 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 80.34335959258375,
-        "GrayScale": null
+        "Difference Percentage": 17.728972706294265,
+        "GrayScale": true
     },
     {
         "image_id": 16,
         "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-                "Latin"
-            ],
-            "font": 3
-            "font": 3
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
             "Diamond"
         ],
         "appearance": [
-            "Semi-Transparent",
-            0.772228388467517
+            "Transparent",
+            0.6275422024131097
         ],
-        "size": "Large",
+        "size": "Small",
         "angle": "Inclined",
         "color": [
             255,
-            255,
-            255
+            0,
+            0
         ],
         "Success": false,
-        "Difference Percentage": 42.942460317460316,
-        "GrayScale": null
+        "Difference Percentage": 25.410714285714285,
+        "GrayScale": true
     },
     {
         "image_id": 17,
         "content": {
-            "type": "Text",
-            "language": [
-                "Cyrillic"
-            ],
-            "font": 6
-            "font": 6
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
@@ -472,9 +428,9 @@
         ],
         "appearance": [
             "Transparent",
-            0.6681437285712166
+            0.6159171554904566
         ],
-        "size": "Large",
+        "size": "Small",
         "angle": "Inclined",
         "color": [
             255,
@@ -482,56 +438,49 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 51.09262428850057,
-        "GrayScale": null
+        "Difference Percentage": 81.49902479799387,
+        "GrayScale": true
     },
     {
         "image_id": 18,
         "content": {
-            "type": "Text",
-            "language": [
-                "Latin",
-                "Chinese"
-            ],
-            "font": 0
-            "font": 0
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
             "Diamond"
         ],
         "appearance": [
-            "Opaque",
-            0.8483981300092603
+            "Semi-Transparent",
+            0.7988239822450913
         ],
-        "size": "Medium",
         "size": "Medium",
         "angle": "Inclined",
         "color": [
-            0,
             255,
-            0
+            255,
+            255
         ],
         "Success": false,
-        "Difference Percentage": 58.236111111111114,
-        "GrayScale": null
+        "Difference Percentage": 35.43452380952381,
+        "GrayScale": true
     },
     {
         "image_id": 19,
         "content": {
-            "type": "Text",
-            "language": [
-                "Chinese"
-            ],
-            "font": 6
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
             "Diamond"
         ],
         "appearance": [
-            "Transparent",
-            0.631333106941011
+            "Semi-Transparent",
+            0.7220619517020396
         ],
         "size": "Small",
         "angle": "Inclined",
@@ -541,18 +490,15 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 56.49441062974897,
-        "GrayScale": null
+        "Difference Percentage": 66.94116242988424,
+        "GrayScale": true
     },
     {
         "image_id": 20,
         "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-                "Latin"
-            ],
-            "font": 3
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
@@ -560,38 +506,35 @@
         ],
         "appearance": [
             "Opaque",
-            0.9141729479532925
+            0.9749280727367956
         ],
         "size": "Large",
         "angle": "Inclined",
         "color": [
-            0,
-            0,
+            255,
+            255,
             255
         ],
         "Success": false,
-        "Difference Percentage": 59.45333015039389,
-        "GrayScale": null
+        "Difference Percentage": 39.50226784435426,
+        "GrayScale": true
     },
     {
         "image_id": 21,
         "content": {
-            "type": "Text",
-            "language": [
-                "Chinese"
-            ],
-            "font": 3
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
             "Diamond"
         ],
         "appearance": [
-            "Semi-Transparent",
-            0.794586523276097
+            "Transparent",
+            0.6604477338850919
         ],
-        "size": "Medium",
-        "size": "Medium",
+        "size": "Small",
         "angle": "Inclined",
         "color": [
             255,
@@ -599,76 +542,67 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 49.198412698412696,
-        "GrayScale": null
+        "Difference Percentage": 18.708333333333332,
+        "GrayScale": true
     },
     {
         "image_id": 22,
         "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 3
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
             "Diamond"
         ],
         "appearance": [
-            "Semi-Transparent",
-            0.707941498370921
+            "Opaque",
+            0.9543526087848049
         ],
-        "size": "Small",
+        "size": "Large",
         "angle": "Inclined",
         "color": [
             255,
             255,
             255
-            255,
-            255
         ],
         "Success": false,
-        "Difference Percentage": 63.39619638736374,
-        "GrayScale": null
+        "Difference Percentage": 56.01177687594493,
+        "GrayScale": true
     },
     {
         "image_id": 23,
         "content": {
-            "type": "Text",
-            "language": [
-                "Chinese"
-            ],
-            "font": 6
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
             "Diamond"
         ],
         "appearance": [
-            "Semi-Transparent",
-            0.7755810608193486
+            "Transparent",
+            0.6481850467768281
         ],
         "size": "Large",
         "angle": "Inclined",
         "color": [
-            0,
-            0,
+            255,
+            255,
             255
         ],
         "Success": false,
-        "Difference Percentage": 39.59001782531194,
-        "GrayScale": null
+        "Difference Percentage": 23.10358486829075,
+        "GrayScale": false
     },
     {
         "image_id": 24,
         "content": {
-            "type": "Text",
-            "language": [
-                "Cyrillic"
-            ],
-            "font": 6
-            "font": 6
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
@@ -676,55 +610,51 @@
         ],
         "appearance": [
             "Opaque",
-            0.8175036235936042
+            0.9918688618646005
         ],
-        "size": "Small",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
+            255,
             0,
-            0,
-            255
+            0
         ],
         "Success": false,
-        "Difference Percentage": 46.25136612021858,
-        "GrayScale": null
+        "Difference Percentage": 15.729756582215598,
+        "GrayScale": true
     },
     {
         "image_id": 25,
         "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 3
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
             "Diamond"
         ],
         "appearance": [
-            "Transparent",
-            0.6748071447525149
+            "Opaque",
+            0.8649354490276029
         ],
-        "size": "Small",
+        "size": "Large",
         "angle": "Inclined",
         "color": [
-            0,
-            0,
+            255,
+            255,
             255
         ],
         "Success": false,
-        "Difference Percentage": 87.47911195989496,
-        "GrayScale": null
+        "Difference Percentage": 55.40105037001671,
+        "GrayScale": true
     },
     {
         "image_id": 26,
         "content": {
-            "type": "Text",
-            "language": [
-                "Chinese"
-            ],
-            "font": 0
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
@@ -732,9 +662,9 @@
         ],
         "appearance": [
             "Transparent",
-            0.6694976661842562
+            0.6195398309354356
         ],
-        "size": "Large",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
             255,
@@ -742,17 +672,15 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 39.06859234503063,
-        "GrayScale": null
+        "Difference Percentage": 32.14569905307552,
+        "GrayScale": true
     },
     {
         "image_id": 27,
         "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 3
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
@@ -760,27 +688,25 @@
         ],
         "appearance": [
             "Transparent",
-            0.6280547029335667
+            0.645929165047972
         ],
-        "size": "Large",
+        "size": "Small",
         "angle": "Inclined",
         "color": [
             255,
-            0,
-            0
+            255,
+            255
         ],
         "Success": false,
-        "Difference Percentage": 70.90114257327372,
-        "GrayScale": null
+        "Difference Percentage": 21.41877794336811,
+        "GrayScale": true
     },
     {
         "image_id": 28,
         "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 0
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
@@ -788,30 +714,25 @@
         ],
         "appearance": [
             "Opaque",
-            0.8021467457545712
+            0.9188544703250588
         ],
-        "size": "Small",
         "size": "Small",
         "angle": "Inclined",
         "color": [
-            0,
             255,
-            0
+            255,
+            255
         ],
         "Success": false,
-        "Difference Percentage": 88.84973721930244,
-        "GrayScale": null
+        "Difference Percentage": 51.62446249402771,
+        "GrayScale": true
     },
     {
         "image_id": 29,
         "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-                "Latin"
-            ],
-            "font": 0
-            "font": 0
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
@@ -819,9 +740,9 @@
         ],
         "appearance": [
             "Opaque",
-            0.8338000865881723
+            0.8008778290532547
         ],
-        "size": "Large",
+        "size": "Small",
         "angle": "Inclined",
         "color": [
             0,
@@ -829,17 +750,15 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 41.904761904761905,
-        "GrayScale": null
+        "Difference Percentage": 47.40277777777778,
+        "GrayScale": false
     },
     {
         "image_id": 30,
         "content": {
-            "type": "Text",
-            "language": [
-                "Greek"
-            ],
-            "font": 0
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
@@ -847,37 +766,35 @@
         ],
         "appearance": [
             "Opaque",
-            0.9068475576204449
+            0.9835011884362707
         ],
-        "size": "Medium",
+        "size": "Large",
         "angle": "Inclined",
         "color": [
-            0,
-            0,
+            255,
+            255,
             255
         ],
         "Success": false,
-        "Difference Percentage": 86.62170764701202,
-        "GrayScale": null
+        "Difference Percentage": 50.841489615660066,
+        "GrayScale": true
     },
     {
         "image_id": 31,
         "content": {
-            "type": "Text",
-            "language": [
-                "Cyrillic"
-            ],
-            "font": 0
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
             "Diamond"
         ],
         "appearance": [
-            "Opaque",
-            0.9830435309278496
+            "Transparent",
+            0.6597414302526211
         ],
-        "size": "Large",
+        "size": "Small",
         "angle": "Inclined",
         "color": [
             0,
@@ -885,94 +802,86 @@
             0
         ],
         "Success": false,
-        "Difference Percentage": 66.70436507936508,
-        "GrayScale": null
+        "Difference Percentage": 16.36111111111111,
+        "GrayScale": true
     },
     {
         "image_id": 32,
         "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 0
-            "font": 0
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
             "Diamond"
         ],
         "appearance": [
-            "Opaque",
-            0.9052675593128768
+            "Semi-Transparent",
+            0.7418926271572965
+        ],
+        "size": "Medium",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 36.494390069228935,
+        "GrayScale": true
+    },
+    {
+        "image_id": 33,
+        "content": {
+            "type": "Logo",
+            "language": [],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": [
+            "Diamond"
+        ],
+        "appearance": [
+            "Transparent",
+            0.6001098010336692
+        ],
+        "size": "Medium",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 11.213893530675579,
+        "GrayScale": true
+    },
+    {
+        "image_id": 34,
+        "content": {
+            "type": "Logo",
+            "language": [],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": [
+            "Diamond"
+        ],
+        "appearance": [
+            "Transparent",
+            0.6699595157992435
         ],
         "size": "Small",
         "angle": "Inclined",
         "color": [
             255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 84.76366674624015,
-        "GrayScale": null
-    },
-    {
-        "image_id": 33,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 3
-        },
-        "location": "Repetitive",
-        "pattern": [
-            "Diamond"
-        ],
-        "appearance": [
-            "Semi-Transparent",
-            0.7365880356786167
-        ],
-        "size": "Medium",
-        "angle": "Inclined",
-        "color": [
-            0,
-            0,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 40.294024031192805,
-        "GrayScale": null
-    },
-    {
-        "image_id": 34,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin",
-                "Chinese"
-            ],
-            "font": 3
-        },
-        "location": "Repetitive",
-        "pattern": [
-            "Diamond"
-        ],
-        "appearance": [
-            "Semi-Transparent",
-            0.7031576147314497
-        ],
-        "size": "Large",
-        "angle": "Inclined",
-        "color": [
-            255,
             0,
             0
         ],
         "Success": false,
-        "Difference Percentage": 41.605158730158735,
-        "GrayScale": null
+        "Difference Percentage": 29.466269841269842,
+        "GrayScale": false
     },
     {
         "image_id": 35,
@@ -986,10 +895,10 @@
             "Diamond"
         ],
         "appearance": [
-            "Semi-Transparent",
-            0.7471161461427822
+            "Opaque",
+            0.846668613300037
         ],
-        "size": "Small",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
             255,
@@ -997,47 +906,15 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 74.9641662685141,
-        "GrayScale": null
+        "Difference Percentage": 8.876811594202898,
+        "GrayScale": false
     },
     {
         "image_id": 36,
         "content": {
-            "type": "Text",
-            "language": [
-                "Greek"
-            ],
-            "font": 0
-            "font": 0
-        },
-        "location": "Repetitive",
-        "pattern": [
-            "Diamond"
-        ],
-        "appearance": [
-            "Semi-Transparent",
-            0.7619414778712391
-        ],
-        "size": "Large",
-        "angle": "Inclined",
-        "color": [
-            255,
-            0,
-            0
-        ],
-        "Success": false,
-        "Difference Percentage": 70.0952380952381,
-        "GrayScale": null
-    },
-    {
-        "image_id": 37,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 0
-            "font": 0
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
@@ -1045,28 +922,25 @@
         ],
         "appearance": [
             "Opaque",
-            0.825350792446709
+            0.8424912087392643
         ],
-        "size": "Small",
+        "size": "Large",
         "angle": "Inclined",
         "color": [
-            0,
             255,
-            0
+            255,
+            255
         ],
-        "Success": false,
-        "Difference Percentage": 48.0218253968254,
-        "GrayScale": null
+        "Success": true,
+        "Difference Percentage": 2.7896825396825395,
+        "GrayScale": true
     },
     {
-        "image_id": 38,
+        "image_id": 37,
         "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 0
-            "font": 0
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
@@ -1074,9 +948,9 @@
         ],
         "appearance": [
             "Transparent",
-            0.6217176695790515
+            0.6110702015729315
         ],
-        "size": "Large",
+        "size": "Small",
         "angle": "Inclined",
         "color": [
             255,
@@ -1084,19 +958,41 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 47.71825396825397,
-        "GrayScale": null
+        "Difference Percentage": 77.23809523809524,
+        "GrayScale": true
+    },
+    {
+        "image_id": 38,
+        "content": {
+            "type": "Logo",
+            "language": [],
+            "font": null
+        },
+        "location": "Repetitive",
+        "pattern": [
+            "Diamond"
+        ],
+        "appearance": [
+            "Semi-Transparent",
+            0.7737546922936371
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 79.20833333333334,
+        "GrayScale": true
     },
     {
         "image_id": 39,
         "content": {
-            "type": "Text",
-            "language": [
-                "Latin",
-                "Chinese"
-            ],
-            "font": 3
-            "font": 3
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
@@ -1104,28 +1000,25 @@
         ],
         "appearance": [
             "Opaque",
-            0.9014559408170898
+            0.937675831113072
         ],
-        "size": "Large",
-        "size": "Large",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
             255,
-            255,
-            255
+            0,
+            0
         ],
         "Success": false,
-        "Difference Percentage": 55.15674603174603,
-        "GrayScale": null
+        "Difference Percentage": 21.525793650793652,
+        "GrayScale": true
     },
     {
         "image_id": 40,
         "content": {
-            "type": "Text",
-            "language": [
-                "Greek"
-            ],
-            "font": 3
+            "type": "Logo",
+            "language": [],
+            "font": null
         },
         "location": "Repetitive",
         "pattern": [
@@ -1133,7 +1026,7 @@
         ],
         "appearance": [
             "Opaque",
-            0.9732341404136859
+            0.9268650656508921
         ],
         "size": "Medium",
         "angle": "Inclined",
@@ -1143,94 +1036,7 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 79.81331847311228,
-        "GrayScale": null
-    },
-    {
-        "image_id": 41,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-                "Latin"
-            ],
-            "font": 3
-        },
-        "location": "Repetitive",
-        "pattern": [
-            "Diamond"
-        ],
-        "appearance": [
-            "Semi-Transparent",
-            0.7609904777814973
-        ],
-        "size": "Small",
-        "angle": "Inclined",
-        "color": [
-            0,
-            0,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 96.16884926163277,
-        "GrayScale": null
-    },
-    {
-        "image_id": 42,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 3
-        },
-        "location": "Repetitive",
-        "pattern": [
-            "Diamond"
-        ],
-        "appearance": [
-            "Semi-Transparent",
-            0.7247190545850157
-        ],
-        "size": "Small",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 71.55446805124532,
-        "GrayScale": null
-    },
-    {
-        "image_id": 43,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Chinese"
-            ],
-            "font": 3
-            "font": 3
-        },
-        "location": "Repetitive",
-        "pattern": [
-            "Diamond"
-        ],
-        "appearance": [
-            "Semi-Transparent",
-            0.7384319116822091
-        ],
-        "size": "Medium",
-        "size": "Medium",
-        "angle": "Inclined",
-        "color": [
-            0,
-            255,
-            0
-        ],
-        "Success": false,
-        "Difference Percentage": 49.92042651388557,
-        "GrayScale": null
+        "Difference Percentage": 56.708991760538154,
+        "GrayScale": true
     }
 ]
