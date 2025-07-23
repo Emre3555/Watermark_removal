@@ -283,7 +283,7 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
     text = ""
     languages_used = []
 
-    num_angle = 0  
+    num_angle = 0
     # Generate text if needed
     if content_type in ["Text", "Both"]:
         size1 = random.randint(5, 12)
@@ -323,10 +323,7 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
         "Opaque": random.uniform(0.8, 1.0)
     }[appearance]
     ###########################################################
-    num_angle1 = random.randint(-45, -30)if angle == "Inclined" else 0
-    num_angle2 = random.randint(30, 45)if angle == "Inclined" else 0
-    choose = random.randint(1, 2)
-    num_angle = num_angle1 if choose == 1 else num_angle2
+    num_angle = random.randint(-45, 45) if angle == "Inclined" else 0
 
     # Determine region size for safe placement
     if content_type == "Both":
@@ -376,8 +373,8 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
             y_step = text_hypotenuse // 2
             gap = text_hypotenuse // 4
 
-            if (pattern[0] == "Diamond" and angle == "Inclined"):
-                if num_angle < 0:
+            if (pattern[0] == "Diamond" and angle == "Inclined" and (num_angle < -15 or num_angle > 15)):
+                if num_angle < -15:
                     start_x = 2 * int(-(h / tan(radians(-num_angle))))
                     if(h > w):
                         start_x *= 2
@@ -386,7 +383,7 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
                         for j, y in enumerate(range(0, h, int(y_step + gap))):
                             image = put_unicode_text(image, text, (curr_x, y), font_path, font_size, color, num_angle, opacity)
                             curr_x += x_step + gap
-                elif num_angle > 0:
+                elif num_angle > 15:
                     start_x = w + 2 * int(h / tan(radians(num_angle)))
                     if(h > w):
                         start_x *= 2
