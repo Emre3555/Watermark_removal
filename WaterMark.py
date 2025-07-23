@@ -323,7 +323,10 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
         "Opaque": random.uniform(0.8, 1.0)
     }[appearance]
     ###########################################################
-    num_angle = random.randint(-45, 45)if angle == "Inclined" else 0
+    num_angle1 = random.randint(-45, -30)if angle == "Inclined" else 0
+    num_angle2 = random.randint(30, 45)if angle == "Inclined" else 0
+    choose = random.randint(1, 2)
+    num_angle = num_angle1 if choose == 1 else num_angle2
 
     # Determine region size for safe placement
     if content_type == "Both":
@@ -365,19 +368,21 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
             pil_font = ImageFont.truetype(font_path, font_size)
             bbox = pil_font.getbbox(text)
             text_w, text_h = bbox[2] - bbox[0], bbox[3] - bbox[1]
-            x_step = int(text_w * random.uniform(1.5, 2.3))
-            y_step = int(text_h * random.uniform(3, 3.8))
-            gap = int(text_w * random.uniform(0.1, 0.25))
+            x_step = int(text_w * random.uniform(1.5, 2.0))
+            y_step = int(text_h * random.uniform(1.7, 2.3))
+            gap = int(text_w * 0.25)
 
-            if pattern == "Diamond":
-                if num_angle < 0:
-                    for i, x in enumerate(range(2*int(-(h/tan(radians(-num_angle)))), w, x_step)):
+            if (pattern[0] == "Diamond" and angle == "Inclined" and (num_angle < -10 or num_angle > 10)):
+                if num_angle < -10:
+                    start_x = 2 * int(-(h / tan(radians(-num_angle))))
+                    for i, x in enumerate(range(start_x, w, x_step)):
                         curr_x = x
                         for y in range(0, h, text_h + gap):
                             image = put_unicode_text(image, text, (curr_x, y), font_path, font_size, color, num_angle, opacity)
-                            curr_x += text_w + gap
-                elif num_angle > 0:
-                    for i, x in enumerate(range(w + 2*int(h/tan(radians(num_angle))), 0, -x_step)):
+                            curr_x += x_step + gap
+                elif num_angle > 10:
+                    start_x = w + 2 * int(h / tan(radians(num_angle)))
+                    for i, x in enumerate(range(start_x, 0, -x_step)):
                         curr_x = x
                         for y in range(0, h, text_h + gap):
                             image = put_unicode_text(image, text, (curr_x, y), font_path, font_size, color, num_angle, opacity)
