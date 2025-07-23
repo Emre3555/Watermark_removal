@@ -420,9 +420,9 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
                 min_x_step = sqrt(pow(x_diff,2)+ pow(y_diff,2))
                 logo_img_clean = logo_img_clean.rotate(num_angle,resample=Image.BICUBIC,expand=True)
 
-            x_step = int(min_x_step * random.uniform(1.2, 1.8))
-            y_step = int(min_y_step * random.uniform(1.2, 1.8))
-            gap = int(x_step*random.uniform(0.5,0.7))
+            x_step = int(min_x_step * random.uniform(1, 1.5))
+            y_step = int(min_y_step * random.uniform(1, 1.5))
+            gap = int(min_x_step*random.uniform(0.1,0.25))
             if (pattern[0] == "Diamond" and angle == "Inclined"):
                 if num_angle < 0:
                     start_x = 2 * int(-(h / tan(radians(-num_angle))))
@@ -430,14 +430,14 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
                         curr_x = x
                         for j, y in enumerate(range(0, h, int(min_y_step + gap))):
                             image_pil.paste(logo_img_clean, (int(curr_x), int(y)), logo_img_clean)
-                            curr_x += logo_img_clean.size[0] + gap
+                            curr_x += x_step + gap
                 elif num_angle > 0:
                     start_x = w + 2 * int(h / tan(radians(num_angle)))
                     for i, x in enumerate(range(start_x, 0, -x_step)):
                         curr_x = x
                         for j, y in enumerate(range(0, h, int(min_y_step + gap))):
                             image_pil.paste(logo_img_clean, (int(curr_x), int(y)), logo_img_clean)
-                            curr_x -= logo_img_clean.size[0] + gap
+                            curr_x -= x_step + gap
             else:
                 for i, y in enumerate(range(0, h, y_step)):
                     x_start = 0 if pattern == "Grid" or i % 2 == 0 else int(x_step / 2)
