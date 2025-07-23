@@ -368,9 +368,13 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
             pil_font = ImageFont.truetype(font_path, font_size)
             bbox = pil_font.getbbox(text)
             text_w, text_h = bbox[2] - bbox[0], bbox[3] - bbox[1]
-            x_step = int(w * random.uniform(0.1, 0.5))
-            y_step = int(text_h * random.uniform(2.0, 2.5))
-            gap = int(text_w * 0.5)
+            #x_step = int(w * random.uniform(0.1, 0.5))
+            #y_step = int(text_h * random.uniform(0.1, 0.2))
+            #gap = int(text_w * 0.5)
+            text_hypotenuse = int(sqrt(text_h**2 + text_w**2))
+            x_step = text_hypotenuse // 2
+            y_step = text_hypotenuse // 2
+            gap = text_hypotenuse // 4
 
             if (pattern[0] == "Diamond" and angle == "Inclined"):
                 if num_angle < 0:
