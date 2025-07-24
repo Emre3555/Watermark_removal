@@ -10,8 +10,9 @@ from math import sin, cos, radians,sqrt,tan
 
 
 FONT_PATH = "./msyh.ttc"
-INPUT_DIR = "C:/Users/Altuner/Desktop/DIV2K_train_HR"
-OUTPUT_DIR = "C:/Users/Altuner/Desktop/Test"
+INPUT_DIR = "./DIV2K_train_HR"
+#INPUT_DIR = "./CarPhotos"
+OUTPUT_DIR = "./Output_Photos"
 LOGO_DIR = "./Logos"
 THIS_DIR = "./"
 
@@ -317,11 +318,13 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
             logo_img = convert_to_grayscale(logo_img)
     font_path = FONT_PATH
     numerical_size = {
-        "Small": random.uniform(0.5, 0.8),
-        "Medium": random.uniform(0.8, 1.1),
-        "Large": random.uniform(1.1, 1.4)
+        "Small": random.uniform(0.2, 0.4),
+        "Medium": random.uniform(0.4, 0.6),
+        "Large": random.uniform(0.6, 0.8)
     }[size]
-    font_size = int(78  * numerical_size)
+    
+    font_size = int((30*sqrt((w*h)/(150*300))) * numerical_size)
+    print(font_size)
     ###########################################################
     ##opacity is set here
     opacity = {
@@ -676,7 +679,8 @@ for filename in os.listdir(input_dir):
             font = random.choice([cv2.FONT_HERSHEY_SIMPLEX, cv2.FONT_HERSHEY_COMPLEX, cv2.FONT_HERSHEY_SCRIPT_SIMPLEX])
             location = random.choices(["Corner", "Medium", "Repetitive"], weights=[1,0,0])[0]
             pattern = random.choices(["Diamond", "Grid"],weights=[0.5,0.5]) if location == "Repetitive" else None
-            appearance = random.choices(["Transparent", "Semi-Transparent", "Opaque"], weights=[0.4, 0.4,0.3])[0]
+            appearance_weights = [1, 0, 0] if location == "Repetitive" else [0.4, 0.3, 0.3]
+            appearance = random.choices(["Transparent", "Semi-Transparent", "Opaque"], appearance_weights)[0]
             size = random.choice(["Small", "Medium", "Large"])
             angle = random.choices(["Inclined","non-inclined"],weights=[1,0])[0]
             color = random.choices([(255, 255, 255), (255, 0, 0), (0, 255, 0), (0, 0, 255)], weights=[0.7, 0.1, 0.1, 0.1])[0]
