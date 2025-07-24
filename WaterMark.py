@@ -323,8 +323,7 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
         "Opaque": random.uniform(0.8, 1.0)
     }[appearance]
     ###########################################################
-    #num_angle = random.randint(-45, 45) if angle == "Inclined" else 0
-    num_angle = 30
+    num_angle = random.randint(-45, 45) if angle == "Inclined" else 0
 
     # Determine region size for safe placement
     if content_type == "Both":
@@ -366,33 +365,25 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
             pil_font = ImageFont.truetype(font_path, font_size)
             bbox = pil_font.getbbox(text)
             text_w, text_h = bbox[2] - bbox[0], bbox[3] - bbox[1]
-            #x_step = int(text_w * random.uniform(1.5, 2.0))
-            #y_step = int(text_h * random.uniform(1.7, 2.3))
-            #gap = int(text_w * 0.25)
-            x_step = 100
-            y_step = 30
-            gap = 30
+            if num_angle < -15 or num_angle > 15:
+                x_step = int(text_h / sin(radians(abs(num_angle))) * random.uniform(1.2, 1.8))
+                y_step = int(((text_h * sin(radians(90 - abs(num_angle)))) + (text_w * sin(radians(abs(num_angle))))) * random.uniform(1.0, 1.5))
+            else:
+                x_step = int(text_w * random.uniform(1.0, 1.5))
+                y_step = int(text_h * random.uniform(1.2, 3.0))
 
-            if (pattern[0] == "Diamond" and angle == "Inclined" and (num_angle < -10 or num_angle > 10)):
-                if num_angle < -10:
-                    start_x = 2 * int(-(h / tan(radians(-num_angle))))
-                    for i, x in enumerate(range(start_x, w, x_step)):
-                        curr_x = x
-                        for y in range(0, h, text_h + gap):
-                            image = put_unicode_text(image, text, (curr_x, y), font_path, font_size, color, num_angle, opacity)
-                            curr_x += x_step + gap
-                elif num_angle > 10:
-                    start_x = w + 2 * int(h / tan(radians(num_angle)))
-                    for i, x in enumerate(range(start_x, 0, -x_step)):
-                        curr_x = x
-                        for y in range(0, h, text_h + gap):
-                            image = put_unicode_text(image, text, (curr_x, y), font_path, font_size, color, num_angle, opacity)
-                            curr_x -= text_w + gap
-            elif pattern == "Grid":
-                if num_angle == 0:
-                    for i, y in enumerate(range(0, h, y_step)):
-                        for x in range(0, w, x_step):
-                            image = put_unicode_text(image, text, (x, y), font_path, font_size, color, num_angle, opacity)
+            print(x_step)
+            print(y_step)
+
+            if (pattern[0] == "Grid"):
+                for i, y in enumerate(range(-(h//2), (3*h)//2, y_step)):
+                    for x in range(0, w, x_step):
+                        image = put_unicode_text(image, text, (x, y), font_path, font_size, color, num_angle, opacity)
+            else:
+                for i, y in enumerate(range(-(h//2), (3*h)//2, y_step)):
+                    x_start = x_step//2 if i % 2 != 0 else 0
+                    for x in range(x_start, w, x_step):
+                        image = put_unicode_text(image, text, (x, y), font_path, font_size, color, num_angle, opacity)
 
         elif content_type == "Logo":
             # Convert OpenCV image to PIL RGBA
@@ -408,7 +399,7 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
                     x = 0
                     y = 0
                     logo_w,logo_h = logo_img_clean.size
-                    ##in this part minumum y difference is calulated by geometry.
+                    ##in this part minimum y difference is calulated by geometry.
                     #first x and y differences of corners of the logo is found
                     #then numerical value is calculated from geometic formula.
                     center = np.array([x + logo_w/2,y + logo_h/2])
@@ -439,26 +430,26 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
                     rotated_topright = rotate_point_funct(topright,center,num_angle)
                     min_x_step = abs(rotated_topleft[0] - rotated_topright[0])
             logo_img_clean = logo_img_clean.rotate(num_angle,resample=Image.BICUBIC,expand=True)
-            x_step = int(min_x_step * random.uniform(1, 1))
-            y_step = int(min_y_step * random.uniform(1, 1))
+            x_step = int(min_x_step * random.uniform(1.2, 1.5))
+            y_step = int(min_y_step * random.uniform(1.2, 1.5))
             gap1 = int(min_x_step*random.uniform(0.25,0.35))
             if (pattern[0] == "Diamond" and angle == "Inclined"):
                 if num_angle < 0:
                     start_x = 2 * int(-(h / tan(radians(-num_angle))))
                     for i, x in enumerate(range(start_x,2 * w, x_step + gap1)):
                         curr_x = x
-                        for j, y in enumerate(range(2*int(-y_step), 2*h, int(y_step))):
+                        for j, y in enumerate(range(int(-(y_step/2)), 2*h, int(y_step))):
                             image_pil.paste(logo_img_clean, (int(curr_x), int(y)), logo_img_clean)
                             curr_x += x_step
                 elif num_angle > 0:
                     start_x = w + 2 * int(h / tan(radians(num_angle)))
                     for i, x in enumerate(range(start_x, -w, -x_step-gap1)):
                         curr_x = x
-                        for j, y in enumerate(range(2*int(-y_step), 2*h, int(y_step))):
+                        for j, y in enumerate(range(int(-(y_step/2)), 2*h, int(y_step))):
                             image_pil.paste(logo_img_clean, (int(curr_x), int(y)), logo_img_clean)
                             curr_x -= x_step
             else:
-                for i, y in enumerate(range(0, h, y_step)):
+                for i, y in enumerate(range(int(-(y_step/2)), h, y_step)):
                     x_start = 0 if pattern == "Grid" or i % 2 == 0 else -x_step // 2
                     for x in range(x_start, w, x_step):
                         image_pil.paste(logo_img_clean, (x, y), logo_img_clean)
@@ -498,7 +489,7 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
             combined_h = (logo_img_clean.height + text_h)*np.cos(angle_rad)
             x_step = int(combined_w * random.uniform(2.0, 2.5))
             y_step = int(combined_h * random.uniform(0.5, 1.0))
-            for i, y in enumerate(range(0, h, y_step)):
+            for i, y in enumerate(range(int(-(y_step/2)), h, y_step)):
                 x_start = 0 if pattern == "Grid" or i % 2 == 0 else int(x_step / 2)
                 for x in range(x_start, w, x_step):##the same logic is applied here
                     x = int(x)
@@ -666,13 +657,13 @@ for i in range(1,46):
     filename = os.path.join(input_dir, f"{i}.jpg")
     if os.path.exists(filename):
         out_path = os.path.join(output_dir,f"{i}.jpg" )
-        content_type = random.choices(["Text", "Logo", "Both"],weights=[0,0,1])[0]
+        content_type = random.choices(["Text", "Logo", "Both"],weights=[0.33,0.33,0.34])[0]
         font = random.choice([cv2.FONT_HERSHEY_SIMPLEX, cv2.FONT_HERSHEY_COMPLEX, cv2.FONT_HERSHEY_SCRIPT_SIMPLEX])
-        location = random.choices(["Corner", "Medium", "Repetitive"], weights=[0,0,1])[0]
-        pattern = random.choices(["Diamond", "Grid"],weights=[1,0]) if location == "Repetitive" else None
+        location = random.choices(["Corner", "Medium", "Repetitive"], weights=[0.33,0.33,0.34])[0]
+        pattern = random.choices(["Diamond", "Grid"],weights=[0.5,0.5]) if location == "Repetitive" else None
         appearance = random.choices(["Transparent", "Semi-Transparent", "Opaque"], weights=[0.4, 0.4,0.3])[0]
         size = random.choice(["Small", "Medium", "Large"])
-        angle = random.choices(["Inclined","non-inclined"],weights=[0,1])[0]
+        angle = random.choices(["Inclined","non-inclined"],weights=[0.5,0.5])[0]
         color = random.choices([(255, 255, 255), (255, 0, 0), (0, 255, 0), (0, 0, 255)], weights=[0.7, 0.1, 0.1, 0.1])[0]
         gray_scale = random.choices([True,False],weights=[0.9,0.1])[0]
         language,opacity = applyWaterMark(filename,out_path,content_type=content_type,location=location,pattern=pattern,appearance=appearance,size=size,angle=angle,color=color,font=font,logo_files=logo_files,gray_scale=gray_scale)
