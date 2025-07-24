@@ -48,8 +48,8 @@
         "angle": "Inclined",
         "color": [
             255,
-            255,
-            255
+            0,
+            0
         ],
         "Success": false,
         "Difference Percentage": 33.49350700925301,
@@ -72,10 +72,12 @@
             "Opaque",
             0.975325685798413
         ],
-        "size": "Large",
-        "angle": "Inclined",
+        "size": "Small",
+        "angle": "non-inclined",
         "color": [
             255,
+            255,
+            255
             255,
             255
         ],
@@ -192,6 +194,8 @@
             255,
             255,
             255
+            255,
+            255
         ],
         "Success": false,
         "Difference Percentage": 31.69246031746032,
@@ -215,9 +219,11 @@
             0.9541872248135255
         ],
         "size": "Medium",
-        "angle": "Inclined",
+        "angle": "non-inclined",
         "color": [
             255,
+            255,
+            255
             255,
             255
         ],
@@ -242,9 +248,11 @@
             "Opaque",
             0.8615626209211958
         ],
-        "size": "Large",
-        "angle": "Inclined",
+        "size": "Small",
+        "angle": "non-inclined",
         "color": [
+            255,
+            255,
             255,
             255,
             255
@@ -328,7 +336,7 @@
             0.6225572681780174
         ],
         "size": "Small",
-        "angle": "Inclined",
+        "angle": "non-inclined",
         "color": [
             255,
             255,
@@ -411,9 +419,11 @@
             "Semi-Transparent",
             0.7711751264326023
         ],
-        "size": "Large",
-        "angle": "Inclined",
+        "size": "Medium",
+        "angle": "non-inclined",
         "color": [
+            255,
+            255,
             255,
             255,
             255
@@ -501,6 +511,8 @@
             255,
             255,
             255
+            255,
+            255
         ],
         "Success": false,
         "Difference Percentage": 31.48015873015873,
@@ -551,8 +563,8 @@
             "Transparent",
             0.6680615587438317
         ],
-        "size": "Large",
-        "angle": "Inclined",
+        "size": "Small",
+        "angle": "non-inclined",
         "color": [
             255,
             255,
@@ -696,6 +708,8 @@
         "color": [
             255,
             255,
+            255,
+            255,
             255
         ],
         "Success": false,
@@ -723,8 +737,8 @@
         "angle": "Inclined",
         "color": [
             255,
-            255,
-            255
+            0,
+            0
         ],
         "Success": false,
         "Difference Percentage": 51.06429537678046,
@@ -753,6 +767,8 @@
             255,
             255,
             255
+            255,
+            255
         ],
         "Success": false,
         "Difference Percentage": 26.410332836562343,
@@ -779,6 +795,8 @@
         "angle": "Inclined",
         "color": [
             255,
+            255,
+            255
             255,
             255
         ],
@@ -832,11 +850,11 @@
             "Semi-Transparent",
             0.7664205322141251
         ],
-        "size": "Medium",
-        "angle": "Inclined",
+        "size": "Large",
+        "angle": "non-inclined",
         "color": [
-            0,
-            0,
+            255,
+            255,
             255
         ],
         "Success": false,
@@ -860,8 +878,8 @@
             "Opaque",
             0.9758472874928316
         ],
-        "size": "Large",
-        "angle": "Inclined",
+        "size": "Medium",
+        "angle": "non-inclined",
         "color": [
             255,
             255,
@@ -891,8 +909,8 @@
         "size": "Large",
         "angle": "Inclined",
         "color": [
-            255,
-            255,
+            0,
+            0,
             255
         ],
         "Success": false,
@@ -916,9 +934,11 @@
             "Transparent",
             0.60058276676444
         ],
-        "size": "Medium",
-        "angle": "Inclined",
+        "size": "Small",
+        "angle": "non-inclined",
         "color": [
+            255,
+            255,
             255,
             255,
             255
@@ -944,8 +964,8 @@
             "Opaque",
             0.8365898033676628
         ],
-        "size": "Large",
-        "angle": "Inclined",
+        "size": "Small",
+        "angle": "non-inclined",
         "color": [
             255,
             255,
@@ -973,12 +993,12 @@
             "Transparent",
             0.6769197872848363
         ],
-        "size": "Small",
-        "angle": "Inclined",
+        "size": "Medium",
+        "angle": "non-inclined",
         "color": [
             255,
-            255,
-            255
+            0,
+            0
         ],
         "Success": false,
         "Difference Percentage": 38.67056856187291,
@@ -1030,9 +1050,11 @@
             0.727596194333411
         ],
         "size": "Small",
-        "angle": "Inclined",
+        "angle": "non-inclined",
         "color": [
             255,
+            255,
+            255
             255,
             255
         ],
@@ -1061,8 +1083,8 @@
         "angle": "Inclined",
         "color": [
             255,
-            255,
-            255
+            0,
+            0
         ],
         "Success": false,
         "Difference Percentage": 35.97222222222222,
@@ -1113,8 +1135,8 @@
             "Transparent",
             0.648075954887075
         ],
-        "size": "Medium",
-        "angle": "Inclined",
+        "size": "Small",
+        "angle": "non-inclined",
         "color": [
             255,
             255,
@@ -1169,11 +1191,11 @@
             "Opaque",
             0.9422197725526675
         ],
-        "size": "Small",
-        "angle": "Inclined",
+        "size": "Medium",
+        "angle": "non-inclined",
         "color": [
-            0,
-            0,
+            255,
+            255,
             255
         ],
         "Success": false,
@@ -1225,8 +1247,8 @@
             "Opaque",
             0.8743125272639337
         ],
-        "size": "Small",
-        "angle": "Inclined",
+        "size": "Large",
+        "angle": "non-inclined",
         "color": [
             255,
             255,
