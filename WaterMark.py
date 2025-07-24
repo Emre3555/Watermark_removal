@@ -10,8 +10,8 @@ from math import sin, cos, radians,sqrt,tan
 
 
 FONT_PATH = "./msyh.ttc"
-INPUT_DIR = "./CarPhotos"
-OUTPUT_DIR = "./Output_Photos"
+INPUT_DIR = "C:/Users/Altuner/Desktop/DIV2K_train_HR"
+OUTPUT_DIR = "C:/Users/Altuner/Desktop/Test"
 LOGO_DIR = "./Logos"
 THIS_DIR = "./"
 
@@ -22,7 +22,13 @@ def rotate_point_funct(pt, center, angle_deg):
         [np.sin(angle_rad),  np.cos(angle_rad)]
     ])
     return (rotation_matrix @ (pt - center)) + center
-
+def rotate_point(pt, center, angle_deg):
+                        angle_rad = np.radians(-angle_deg)
+                        rotation_matrix = np.array([
+                            [np.cos(angle_rad), -np.sin(angle_rad)],
+                            [np.sin(angle_rad),  np.cos(angle_rad)]
+                        ])
+                        return (rotation_matrix @ (pt - center)) + center
 def rotate_image_opencv(pil_img, angle):
     # Convert PIL to NumPy array (RGBA)
     img_np = np.array(pil_img)
@@ -314,7 +320,7 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
         "Medium": random.uniform(0.8, 1.1),
         "Large": random.uniform(1.1, 1.4)
     }[size]
-    font_size = int(14 * numerical_size)
+    font_size = int(48  * numerical_size)
     ###########################################################
     ##opacity is set here
     opacity = {
@@ -324,7 +330,8 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
     }[appearance]
     ###########################################################
     num_angle = random.randint(-45, 45) if angle == "Inclined" else 0
-
+    region_w = 0
+    region_h = 0
     # Determine region size for safe placement
     if content_type == "Both":
         logo_w, logo_h = logo_img.size
@@ -363,8 +370,19 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
         
         if content_type == "Text":
             pil_font = ImageFont.truetype(font_path, font_size)
+            ascent, descent = pil_font.getmetrics()
             bbox = pil_font.getbbox(text)
-            text_w, text_h = bbox[2] - bbox[0], bbox[3] - bbox[1]
+            text_w = bbox[2] - bbox[0]
+            text_h = ascent + descent
+            text_img = Image.new("RGBA", (text_w, text_h), (255, 255, 255, 0))
+            draw = ImageDraw.Draw(text_img)
+            draw.text(
+                (0, 0),
+                text,
+                font=pil_font,
+                fill=color + (int(opacity * 255),),
+            )
+            text_img = text_img.rotate(num_angle, resample=Image.BICUBIC, expand=True)
             if num_angle < -15 or num_angle > 15:
                 x_step = int(text_h / sin(radians(abs(num_angle))) * random.uniform(1.2, 1.8))
                 y_step = int(((text_h * sin(radians(90 - abs(num_angle)))) + (text_w * sin(radians(abs(num_angle))))) * random.uniform(1.0, 1.5))
@@ -372,18 +390,19 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
                 x_step = int(text_w * random.uniform(1.0, 1.5))
                 y_step = int(text_h * random.uniform(1.2, 3.0))
 
-            print(x_step)
-            print(y_step)
-
             if (pattern[0] == "Grid"):
                 for i, y in enumerate(range(-(h//2), (3*h)//2, y_step)):
                     for x in range(0, w, x_step):
-                        image = put_unicode_text(image, text, (x, y), font_path, font_size, color, num_angle, opacity)
+                        image_pil.paste(text_img, (x,y), text_img)
             else:
                 for i, y in enumerate(range(-(h//2), (3*h)//2, y_step)):
                     x_start = x_step//2 if i % 2 != 0 else 0
                     for x in range(x_start, w, x_step):
-                        image = put_unicode_text(image, text, (x, y), font_path, font_size, color, num_angle, opacity)
+                        image_pil.paste(text_img, (x,y), text_img)
+            white_bg = Image.new("RGBA", image_pil.size, (255, 255, 255, 255))
+            flattened = Image.alpha_composite(white_bg, image_pil)
+            # Convert back to OpenCV
+            image = cv2.cvtColor(np.array(flattened.convert("RGB")), cv2.COLOR_RGB2BGR)
 
         elif content_type == "Logo":
             # Convert OpenCV image to PIL RGBA
@@ -503,13 +522,6 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
                     combined_height = max(logo_img_clean.height, text_img.height)
                     shared_center = np.array([x + combined_width // 2, y + combined_height // 2])
 
-                    def rotate_point(pt, center, angle_deg):
-                        angle_rad = np.radians(-angle_deg)
-                        rotation_matrix = np.array([
-                            [np.cos(angle_rad), -np.sin(angle_rad)],
-                            [np.sin(angle_rad),  np.cos(angle_rad)]
-                        ])
-                        return (rotation_matrix @ (pt - center)) + center
 
                     if angle == "Inclined":
                         # Rotate logo
@@ -648,42 +660,45 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
 
 
 metadata = []
-image_id = 0
+image_id = 1
 input_dir = INPUT_DIR
 output_dir = OUTPUT_DIR
 logo_dir = LOGO_DIR
 logo_files = get_pngs_with_transparent_background(logo_dir)
-for i in range(1,46):
-    filename = os.path.join(input_dir, f"{i}.jpg")
-    if os.path.exists(filename):
-        out_path = os.path.join(output_dir,f"{i}.jpg" )
-        content_type = random.choices(["Text", "Logo", "Both"],weights=[0.33,0.33,0.34])[0]
-        font = random.choice([cv2.FONT_HERSHEY_SIMPLEX, cv2.FONT_HERSHEY_COMPLEX, cv2.FONT_HERSHEY_SCRIPT_SIMPLEX])
-        location = random.choices(["Corner", "Medium", "Repetitive"], weights=[0.33,0.33,0.34])[0]
-        pattern = random.choices(["Diamond", "Grid"],weights=[0.5,0.5]) if location == "Repetitive" else None
-        appearance = random.choices(["Transparent", "Semi-Transparent", "Opaque"], weights=[0.4, 0.4,0.3])[0]
-        size = random.choice(["Small", "Medium", "Large"])
-        angle = random.choices(["Inclined","non-inclined"],weights=[0.5,0.5])[0]
-        color = random.choices([(255, 255, 255), (255, 0, 0), (0, 255, 0), (0, 0, 255)], weights=[0.7, 0.1, 0.1, 0.1])[0]
-        gray_scale = random.choices([True,False],weights=[0.9,0.1])[0]
-        language,opacity = applyWaterMark(filename,out_path,content_type=content_type,location=location,pattern=pattern,appearance=appearance,size=size,angle=angle,color=color,font=font,logo_files=logo_files,gray_scale=gray_scale)
-        result,diff_ratio = compare_images(filename,out_path,1,0.05)
-        metadata.append({
-        "image_id": i,
-        "content": {
-            "type": content_type,
-            "language": language,
-            "font": font if content_type == "Text" else None
-        },
-        "location": location,
-        "pattern": pattern if location == "Repetitive" else None,
-        "appearance": (appearance,opacity),
-        "size": size,
-        "angle": angle,
-        "color": color,
-        "Success": result,
-        "Difference Percentage": diff_ratio * 100,
-        "GrayScale": gray_scale if content_type == "Logo" or content_type == "Both" else None
-    })
+for filename in os.listdir(input_dir):
+    if filename.lower().endswith((".jpg", ".png")):
+        input_file_path = os.path.join(input_dir, filename)
+        if(os.path.exists(input_file_path)):
+            out_path = os.path.join(output_dir, f"{image_id}.jpg")
+            content_type = random.choices(["Text", "Logo", "Both"],weights=[0.3,0.3,0.4])[0]
+            font = random.choice([cv2.FONT_HERSHEY_SIMPLEX, cv2.FONT_HERSHEY_COMPLEX, cv2.FONT_HERSHEY_SCRIPT_SIMPLEX])
+            location = random.choices(["Corner", "Medium", "Repetitive"], weights=[0.5,0.3,0.2])[0]
+            pattern = random.choices(["Diamond", "Grid"],weights=[0.5,0.5]) if location == "Repetitive" else None
+            appearance = random.choices(["Transparent", "Semi-Transparent", "Opaque"], weights=[0.4, 0.4,0.3])[0]
+            size = random.choice(["Small", "Medium", "Large"])
+            angle = random.choices(["Inclined","non-inclined"],weights=[0.5,0.5])[0]
+            color = random.choices([(255, 255, 255), (255, 0, 0), (0, 255, 0), (0, 0, 255)], weights=[0.7, 0.1, 0.1, 0.1])[0]
+            gray_scale = random.choices([True,False],weights=[0.9,0.1])[0]
+            language,opacity = applyWaterMark(input_file_path,out_path,content_type=content_type,location=location,pattern=pattern,appearance=appearance,size=size,angle=angle,color=color,font=font,logo_files=logo_files,gray_scale=gray_scale)
+            print(image_id)
+            result,diff_ratio = compare_images(input_file_path,out_path,1,0.05)
+            metadata.append({
+            "image_id": image_id-1,
+            "content": {
+                "type": content_type,
+                "language": language,
+                "font": font if content_type == "Text" else None
+            },
+            "location": location,
+            "pattern": pattern if location == "Repetitive" else None,
+            "appearance": (appearance,opacity),
+            "size": size,
+            "angle": angle,
+            "color": color,
+            "Success": result,
+            "Difference Percentage": diff_ratio * 100,
+            "GrayScale": gray_scale if content_type == "Logo" or content_type == "Both" else None
+        })
+        image_id += 1
         this_dir = THIS_DIR
         with open(os.path.join(this_dir, "metadata.json"), "w", encoding="utf-8") as f:json.dump(metadata, f, indent=4, ensure_ascii=False)
