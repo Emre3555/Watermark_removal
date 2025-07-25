@@ -231,11 +231,18 @@ def get_safe_rotated_position(width, height, angle_deg, image_w, image_h):
 
     rotated_w = max_x - min_x
     rotated_h = max_y - min_y
-
+    safe_y_min = 0
+    if(angle_deg < 0):
+        safe_y_min = int(np.clip(-min_y, 0, image_h - rotated_h))
+        safe_x_min = int(np.clip(-min_x, 0, image_w - rotated_w))
+    else:
+        top_left_y  = rotated_corners[0][1]
+        top_right_y = rotated_corners[1][1]
+        y_diff = top_right_y - top_left_y
+        safe_y_min = int(np.clip(0, y_diff, image_h - rotated_h))
+        safe_x_min = int(np.clip(0, 0, image_w - rotated_w))
     # Valid placement ranges
-    safe_x_min = int(np.clip(-min_x, 0, image_w - rotated_w))
     safe_x_max = int(np.clip(image_w - max_x, safe_x_min, image_w - rotated_w))
-    safe_y_min = int(np.clip(-min_y, 0, image_h - rotated_h))
     safe_y_max = int(np.clip(image_h - max_y, safe_y_min, image_h - rotated_h))
 
     if safe_x_max <= safe_x_min or safe_y_max <= safe_y_min:
@@ -332,7 +339,7 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
         "Opaque": random.uniform(0.8, 1.0)
     }[appearance]
     ###########################################################
-    num_angle = random.randint(0, 45) if angle == "Inclined" else 0
+    num_angle = random.randint(-45, 45) if angle == "Inclined" else 0
     region_w = 0
     region_h = 0
     # Determine region size for safe placement
