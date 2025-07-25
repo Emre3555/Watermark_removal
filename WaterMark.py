@@ -10,7 +10,7 @@ from math import sin, cos, radians,sqrt,tan
 
 
 FONT_PATH = "./msyh.ttc"
-INPUT_DIR = "./DIV2K_train_HR"
+INPUT_DIR = "C:/Users/Altuner/Desktop/DIV2K_train_HR"
 #INPUT_DIR = "./CarPhotos"
 OUTPUT_DIR = "./Output_Photos"
 LOGO_DIR = "./Logos"
@@ -193,54 +193,54 @@ def get_pngs_with_transparent_background(folder_path, threshold_ratio=0.1):
 
 def get_safe_rotated_position(width, height, angle_deg, image_w, image_h):
     """
-    Rotated kutunun güvenli yerleştirme aralığını döndürür.
+    Returns safe placement ranges for a rotated rectangle within an image.
     
     Args:
-        width: metin veya logonun birleşik kutusunun genişliği
-        height: metin veya logonun birleşik kutusunun yüksekliği
-        angle_deg: döndürme açısı (derece)
-        image_w: resmin genişliği
-        image_h: resmin yüksekliği
+        width: unrotated box width (e.g. logo/text)
+        height: unrotated box height
+        angle_deg: rotation angle in degrees (counterclockwise)
+        image_w: image width
+        image_h: image height
     
     Returns:
         ((safe_x_min, safe_x_max), (safe_y_min, safe_y_max))
-        Yerleştirme yapılabilecek güvenli x ve y aralıkları
     """
-
     theta = radians(angle_deg)
-    
-    # Orijinal kutunun köşeleri
+
+    # Center-based corners
+    half_w, half_h = width / 2, height / 2
     corners = np.array([
-        [0, 0],
-        [width, 0],
-        [width, height],
-        [0, height]
+        [-half_w, -half_h],
+        [ half_w, -half_h],
+        [ half_w,  half_h],
+        [-half_w,  half_h]
     ])
-    
-    # Rotasyon matrisi
+
+    # Rotation matrix
     R = np.array([
         [cos(theta), -sin(theta)],
         [sin(theta),  cos(theta)]
     ])
-    
-    # Rotasyon uygulanmış köşeler
+
+    # Rotate corners
     rotated_corners = np.dot(corners, R.T)
-    
-    # Döndürülmüş kutunun dış sınırları
+
+    # Bounding box after rotation
     min_x, min_y = np.min(rotated_corners, axis=0)
     max_x, max_y = np.max(rotated_corners, axis=0)
 
     rotated_w = max_x - min_x
     rotated_h = max_y - min_y
 
-    # Güvenli yerleştirme sınırları
+    # Valid placement ranges
     safe_x_min = int(np.clip(-min_x, 0, image_w - rotated_w))
     safe_x_max = int(np.clip(image_w - max_x, safe_x_min, image_w - rotated_w))
     safe_y_min = int(np.clip(-min_y, 0, image_h - rotated_h))
     safe_y_max = int(np.clip(image_h - max_y, safe_y_min, image_h - rotated_h))
 
     if safe_x_max <= safe_x_min or safe_y_max <= safe_y_min:
-        # Eğer sığmıyorsa ortala
+        # Doesn't fit: center fallback
+        print("Tepecik")
         x_center = image_w // 2 - int(rotated_w // 2)
         y_center = image_h // 2 - int(rotated_h // 2)
         return ((x_center, x_center), (y_center, y_center))
@@ -324,7 +324,6 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
     }[size]
     
     font_size = int((30*sqrt((w*h)/(150*300))) * numerical_size)
-    print(font_size)
     ###########################################################
     ##opacity is set here
     opacity = {
@@ -350,6 +349,9 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
             # Match logo height to text height with a slight multiplier (optional)
             region_w = target_logo_width + text_w + 10
             region_h = max(target_logo_height, text_h)
+        else:
+            region_h = max(logo_h,text_h)
+            region_w = logo_w + text_w + 10
 
     elif content_type == "Text":
         pil_font = ImageFont.truetype(font_path, font_size)
@@ -675,7 +677,7 @@ for filename in os.listdir(input_dir):
         input_file_path = os.path.join(input_dir, filename)
         if(os.path.exists(input_file_path)):
             out_path = os.path.join(output_dir, f"{image_id}.jpg")
-            content_type = random.choices(["Text", "Logo", "Both"],weights=[0,1,0])[0]
+            content_type = random.choices(["Text", "Logo", "Both"],weights=[1,0,0])[0]
             font = random.choice([cv2.FONT_HERSHEY_SIMPLEX, cv2.FONT_HERSHEY_COMPLEX, cv2.FONT_HERSHEY_SCRIPT_SIMPLEX])
             location = random.choices(["Corner", "Medium", "Repetitive"], weights=[1,0,0])[0]
             pattern = random.choices(["Diamond", "Grid"],weights=[0.5,0.5]) if location == "Repetitive" else None
