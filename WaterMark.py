@@ -10,7 +10,7 @@ from math import sin, cos, radians,sqrt,tan
 
 
 FONT_PATH = "./msyh.ttc"
-INPUT_DIR = "C:/Users/Altuner/Desktop/DIV2K_train_HR"
+INPUT_DIR = "./DIV2K_train_HR"
 #INPUT_DIR = "./CarPhotos"
 OUTPUT_DIR = "./Output_Photos"
 LOGO_DIR = "./Logos"
@@ -318,9 +318,9 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
             logo_img = convert_to_grayscale(logo_img)
     font_path = FONT_PATH
     numerical_size = {
-        "Small": random.uniform(0.2, 0.4),
-        "Medium": random.uniform(0.4, 0.6),
-        "Large": random.uniform(0.6, 0.8)
+        "Small": random.uniform(0.3, 0.4),
+        "Medium": random.uniform(0.4, 0.5),
+        "Large": random.uniform(0.5, 0.6)
     }[size]
     
     font_size = int((30*sqrt((w*h)/(150*300))) * numerical_size)
@@ -332,7 +332,7 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
         "Opaque": random.uniform(0.8, 1.0)
     }[appearance]
     ###########################################################
-    num_angle = random.randint(30, 45) if angle == "Inclined" else 0
+    num_angle = random.randint(0, 45) if angle == "Inclined" else 0
     region_w = 0
     region_h = 0
     # Determine region size for safe placement
