@@ -466,8 +466,8 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
                     rotated_topright = rotate_point_funct(topright,center,num_angle)
                     min_x_step = abs(rotated_topleft[0] - rotated_topright[0])
             logo_img_clean = logo_img_clean.rotate(num_angle,resample=Image.BICUBIC,expand=True)
-            x_step = int(min_x_step * random.uniform(1.2, 1.5))
-            y_step = int(min_y_step * random.uniform(1.2, 1.5))
+            x_step = int(min_x_step * random.uniform(1.3, 2))
+            y_step = int(min_y_step * random.uniform(1.3, 2))
             gap1 = int(min_x_step*random.uniform(0.25,0.35))
             if (pattern[0] == "Diamond" and angle == "Inclined"):
                 if num_angle < 0:
@@ -485,7 +485,7 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
                             image_pil.paste(logo_img_clean, (int(curr_x), int(y)), logo_img_clean)
                             curr_x -= x_step
             else:
-                for i, y in enumerate(range(int(-(y_step/2)), h, y_step)):
+                for i, y in enumerate(range(int(3*-(y_step/2)), h, y_step)):
                     x_start = 0 if pattern == "Grid" or i % 2 == 0 else -x_step // 2
                     for x in range(x_start, w, x_step):
                         image_pil.paste(logo_img_clean, (x, y), logo_img_clean)
@@ -525,7 +525,7 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
             combined_h = (logo_img_clean.height + text_h)*np.cos(angle_rad)
             x_step = int(combined_w * random.uniform(2.0, 2.5))
             y_step = int(combined_h * random.uniform(0.5, 1.0))
-            for i, y in enumerate(range(int(-(y_step/2)), h, y_step)):
+            for i, y in enumerate(range(int(3*-(y_step/2)), h, y_step)):
                 x_start = 0 if pattern == "Grid" or i % 2 == 0 else int(x_step / 2)
                 for x in range(x_start, w, x_step):##the same logic is applied here
                     x = int(x)
@@ -693,8 +693,8 @@ for filename in os.listdir(input_dir):
             out_path = os.path.join(output_dir, f"{image_id}.jpg")
             content_type = random.choices(["Text", "Logo", "Both"],weights=[0.4,0.3,0.3])[0]
             font = random.choice([cv2.FONT_HERSHEY_SIMPLEX, cv2.FONT_HERSHEY_COMPLEX, cv2.FONT_HERSHEY_SCRIPT_SIMPLEX])
-            location = random.choices(["Corner", "Medium", "Repetitive"], weights=[0.3,0.2,0.5])[0]
-            pattern = random.choices(["Diamond", "Grid"],weights=[0.5,0.5]) if location == "Repetitive" else None
+            location = random.choices(["Corner", "Medium", "Repetitive"], weights=[0,0,1])[0]
+            pattern = random.choices(["Diamond", "Grid"],weights=[0,1]) if location == "Repetitive" else None
             appearance_weights = [1, 0, 0] if location == "Repetitive" else [0.4, 0.3, 0.3]
             appearance = random.choices(["Transparent", "Semi-Transparent", "Opaque"], appearance_weights)[0]
             size = random.choice(["Small", "Medium", "Large"])
