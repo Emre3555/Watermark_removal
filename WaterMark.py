@@ -248,7 +248,6 @@ def get_safe_rotated_position(width, height, angle_deg, image_w, image_h):
 
     if safe_x_max <= safe_x_min or safe_y_max <= safe_y_min:
         # Doesn't fit: center fallback
-        print("Tepecik")
         x_center = image_w // 2 - int(rotated_w // 2)
         y_center = image_h // 2 - int(rotated_h // 2)
         return ((x_center, x_center), (y_center, y_center))
@@ -318,8 +317,6 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
             text += safe_char_from_range(ranges[0])
         
         languages_used = [languages[chosen_index[0]]]
-        print(text)
-        print(languages_used[0])
 
     # Load logo if needed
     if content_type in ["Logo", "Both"]:
@@ -327,7 +324,7 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
         logo_img = crop_transparent_padding(logo_path)
         if(gray_scale):
             logo_img = convert_to_grayscale(logo_img)
-    if languages_used[0] != "Chinese":
+    if content_type != "Logo" and languages_used[0] != "Chinese":
         font_path = FONT_PATH
     else:
         font_path = FONT_PATH_SC
@@ -407,8 +404,8 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
                 x_step = int(text_h / sin(radians(abs(num_angle))) * random.uniform(1.2, 1.8))
                 y_step = int(((text_h * sin(radians(90 - abs(num_angle)))) + (text_w * sin(radians(abs(num_angle))))) * random.uniform(1.0, 1.5))
             else:
-                x_step = int(text_w * random.uniform(1.0, 1.5))
-                y_step = int(text_h * random.uniform(1.2, 3.0))
+                x_step = int(text_w * random.uniform(1.2,2))
+                y_step = int(text_h * random.uniform(1.2,3.0))
 
             if (pattern[0] == "Grid"):
                 for i, y in enumerate(range(-(h//2), (3*h)//2, y_step)):
@@ -694,19 +691,18 @@ for filename in os.listdir(input_dir):
         input_file_path = os.path.join(input_dir, filename)
         if(os.path.exists(input_file_path)):
             out_path = os.path.join(output_dir, f"{image_id}.jpg")
-            content_type = random.choices(["Text", "Logo", "Both"],weights=[1,0,0])[0]
+            content_type = random.choices(["Text", "Logo", "Both"],weights=[0.4,0.3,0.3])[0]
             font = random.choice([cv2.FONT_HERSHEY_SIMPLEX, cv2.FONT_HERSHEY_COMPLEX, cv2.FONT_HERSHEY_SCRIPT_SIMPLEX])
-            location = random.choices(["Corner", "Medium", "Repetitive"], weights=[1,0,0])[0]
+            location = random.choices(["Corner", "Medium", "Repetitive"], weights=[0.3,0.2,0.5])[0]
             pattern = random.choices(["Diamond", "Grid"],weights=[0.5,0.5]) if location == "Repetitive" else None
             appearance_weights = [1, 0, 0] if location == "Repetitive" else [0.4, 0.3, 0.3]
             appearance = random.choices(["Transparent", "Semi-Transparent", "Opaque"], appearance_weights)[0]
             size = random.choice(["Small", "Medium", "Large"])
-            angle = random.choices(["Inclined","non-inclined"],weights=[1,0])[0]
+            angle = random.choices(["Inclined","non-inclined"],weights=[0.5,0.5])[0]
             color = random.choices([(255, 255, 255), (255, 0, 0), (0, 255, 0), (0, 0, 255)], weights=[0.7, 0.1, 0.1, 0.1])[0]
             gray_scale = random.choices([True,False],weights=[0.9,0.1])[0]
             language,opacity = applyWaterMark(input_file_path,out_path,content_type=content_type,location=location,pattern=pattern,appearance=appearance,size=size,angle=angle,color=color,font=font,logo_files=logo_files,gray_scale=gray_scale)
             print(image_id)
-            result,diff_ratio = compare_images(input_file_path,out_path,1,0.05)
             metadata.append({
             "image_id": image_id,
             "content": {
@@ -720,8 +716,6 @@ for filename in os.listdir(input_dir):
             "size": size,
             "angle": angle,
             "color": color,
-            "Success": result,
-            "Difference Percentage": diff_ratio * 100,
             "GrayScale": gray_scale if content_type == "Logo" or content_type == "Both" else None
         })
         image_id += 1
