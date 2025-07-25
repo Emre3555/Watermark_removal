@@ -9,7 +9,7 @@ import json
 from math import sin, cos, radians,sqrt,tan
 
 
-FONT_PATH = "./NotoSans.ttf"
+FONT_PATH = "./Symbola.ttf"
 FONT_PATH_SC = "./NotoSansSC.ttf"
 INPUT_DIR = "./DIV2K_train_HR"
 #INPUT_DIR = "./CarPhotos"
