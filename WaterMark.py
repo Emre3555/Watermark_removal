@@ -9,7 +9,8 @@ import json
 from math import sin, cos, radians,sqrt,tan
 
 
-FONT_PATH = "./msyh.ttc"
+FONT_PATH = "./NotoSans.ttf"
+FONT_PATH_SC = "./NotoSansSC.ttf"
 INPUT_DIR = "./DIV2K_train_HR"
 #INPUT_DIR = "./CarPhotos"
 OUTPUT_DIR = "./Output_Photos"
@@ -260,9 +261,12 @@ def safe_char_from_range(rng):#helper function
         if is_displayable(ch):
             return ch
 
-def put_unicode_text(image, text, position, font_path, font_size, color, angle, opacity):
+def put_unicode_text(image, text, position, font_path, font_size, color, angle, opacity, isChinese):
     # Convert OpenCV BGR image to RGBA PIL Image (add alpha channel)
-    font_path = FONT_PATH
+    if isChinese:
+        font_path = FONT_PATH_SC
+    else:
+        font_path = FONT_PATH
     image_pil = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB)).convert("RGBA")
 
     # Create a transparent image for the text
@@ -297,18 +301,18 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
         size1 = random.randint(5, 12)
         unicode_ranges = [(33, 126), (0x0400, 0x04FF), (0x0370, 0x03FF), (0x4E00, 0x4E80)]
         languages = ["Latin", "Cyrillic", "Greek", "Chinese"]
-        language_count = random.choices([1, 2], weights=[0.9, 0.1])[0]
+        #language_count = random.choices([1, 2], weights=[0.9, 0.1])[0]
         indices = np.arange(len(unicode_ranges))
         weights = [0.7, 0.1, 0.1, 0.1]
-        chosen_indices = np.random.choice(indices, size=language_count, replace=False, p=weights)
-        ranges = [unicode_ranges[i] for i in chosen_indices]
-        if language_count == 1:
-            for _ in range(size1):
-                text += safe_char_from_range(ranges[0])
-        else:
-            for i in range(size1):
-                text += safe_char_from_range(ranges[i < size1 // 2])
-        languages_used = [languages[i] for i in chosen_indices]
+        chosen_index = np.random.choice(indices, size=1, replace=False, p=weights)
+        ranges = [unicode_ranges[chosen_index[0]]]
+
+        for _ in range(size1):
+            text += safe_char_from_range(ranges[0])
+        
+        languages_used = [languages[chosen_index[0]]]
+        print(text)
+        print(languages_used[0])
 
     # Load logo if needed
     if content_type in ["Logo", "Both"]:
@@ -316,7 +320,10 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
         logo_img = crop_transparent_padding(logo_path)
         if(gray_scale):
             logo_img = convert_to_grayscale(logo_img)
-    font_path = FONT_PATH
+    if languages_used[0] != "Chinese":
+        font_path = FONT_PATH
+    else:
+        font_path = FONT_PATH_SC
     numerical_size = {
         "Small": random.uniform(0.3, 0.4),
         "Medium": random.uniform(0.4, 0.5),
@@ -579,7 +586,10 @@ def applyWaterMark(input_path, output_path, content_type, font, location, patter
     # Rendering based on content
     image_pil = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB)).convert("RGBA")
     if content_type == "Text":
-        image = put_unicode_text(image, text, (int(x), int(y)), font_path, font_size, color, num_angle, opacity)
+        if languages_used[0] == "Chinese":
+            image = put_unicode_text(image, text, (int(x), int(y)), font_path, font_size, color, num_angle, opacity, True)
+        else:
+            image = put_unicode_text(image, text, (int(x), int(y)), font_path, font_size, color, num_angle, opacity, False)
 
     elif content_type == "Logo":
         image_pil = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB)).convert("RGBA")

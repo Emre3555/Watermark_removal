@@ -4,15 +4,15 @@
         "content": {
             "type": "Text",
             "language": [
-                "Cyrillic"
+                "Chinese"
             ],
             "font": 6
         },
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Semi-Transparent",
-            0.7859491730263488
+            "Transparent",
+            0.6767974674569698
         ],
         "size": "Small",
         "angle": "Inclined",
@@ -22,7 +22,7 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 45.424294349008036,
+        "Difference Percentage": 45.3362687257794,
         "GrayScale": null
     },
     {
@@ -30,17 +30,17 @@
         "content": {
             "type": "Text",
             "language": [
-                "Greek"
+                "Latin"
             ],
             "font": 3
         },
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Opaque",
-            0.9448072369503719
+            "Semi-Transparent",
+            0.7248366302879509
         ],
-        "size": "Large",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
             255,
@@ -48,7 +48,7 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 52.30044428239615,
+        "Difference Percentage": 51.743133203694704,
         "GrayScale": null
     },
     {
@@ -63,36 +63,10 @@
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Transparent",
-            0.6498883483784919
-        ],
-        "size": "Small",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 35.87655160103257,
-        "GrayScale": null
-    },
-    {
-        "image_id": 4,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 3
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
             "Opaque",
-            0.9473020042365303
+            0.8129443160762986
         ],
-        "size": "Large",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
             255,
@@ -100,7 +74,33 @@
             0
         ],
         "Success": false,
-        "Difference Percentage": 34.54995149101307,
+        "Difference Percentage": 35.93483962212336,
+        "GrayScale": null
+    },
+    {
+        "image_id": 4,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Cyrillic"
+            ],
+            "font": 3
+        },
+        "location": "Corner",
+        "pattern": null,
+        "appearance": [
+            "Transparent",
+            0.6463869257555478
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            0,
+            0
+        ],
+        "Success": false,
+        "Difference Percentage": 34.11968954248366,
         "GrayScale": null
     },
     {
@@ -115,10 +115,10 @@
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Semi-Transparent",
-            0.7872426562301233
+            "Transparent",
+            0.6652850879765905
         ],
-        "size": "Small",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
             255,
@@ -126,7 +126,7 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 57.091792469200065,
+        "Difference Percentage": 57.13773931401469,
         "GrayScale": null
     },
     {
@@ -136,23 +136,23 @@
             "language": [
                 "Latin"
             ],
-            "font": 0
+            "font": 6
         },
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Semi-Transparent",
-            0.733812674735702
+            "Opaque",
+            0.8366331143783265
         ],
         "size": "Large",
         "angle": "Inclined",
         "color": [
             255,
-            255,
-            255
+            0,
+            0
         ],
         "Success": false,
-        "Difference Percentage": 59.835878304124016,
+        "Difference Percentage": 59.75978223147666,
         "GrayScale": null
     },
     {
@@ -162,15 +162,15 @@
             "language": [
                 "Latin"
             ],
-            "font": 0
+            "font": 3
         },
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Opaque",
-            0.9635470921556661
+            "Transparent",
+            0.6909525813453161
         ],
-        "size": "Large",
+        "size": "Small",
         "angle": "Inclined",
         "color": [
             255,
@@ -178,7 +178,7 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 27.926318757591535,
+        "Difference Percentage": 27.8390522875817,
         "GrayScale": null
     },
     {
@@ -193,18 +193,18 @@
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Transparent",
-            0.6804634391582893
+            "Opaque",
+            0.9364209441305845
         ],
         "size": "Large",
         "angle": "Inclined",
         "color": [
             255,
-            0,
-            0
+            255,
+            255
         ],
         "Success": false,
-        "Difference Percentage": 27.470935276765573,
+        "Difference Percentage": 27.07389814332813,
         "GrayScale": null
     },
     {
@@ -212,7 +212,6 @@
         "content": {
             "type": "Text",
             "language": [
-                "Cyrillic",
                 "Latin"
             ],
             "font": 6
@@ -220,18 +219,18 @@
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Transparent",
-            0.6670935288227237
+            "Semi-Transparent",
+            0.7522134840741277
         ],
-        "size": "Large",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
-            0,
-            0,
+            255,
+            255,
             255
         ],
         "Success": false,
-        "Difference Percentage": 47.03033720862976,
+        "Difference Percentage": 46.737340216322515,
         "GrayScale": null
     },
     {
@@ -241,13 +240,13 @@
             "language": [
                 "Latin"
             ],
-            "font": 6
+            "font": 0
         },
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Transparent",
-            0.6553747513928111
+            "Opaque",
+            0.9969479162250909
         ],
         "size": "Small",
         "angle": "Inclined",
@@ -257,7 +256,7 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 42.690820927136286,
+        "Difference Percentage": 42.71699497700315,
         "GrayScale": null
     },
     {
@@ -267,41 +266,15 @@
             "language": [
                 "Latin"
             ],
-            "font": 6
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Opaque",
-            0.8373041899094619
-        ],
-        "size": "Small",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 63.14929480564155,
-        "GrayScale": null
-    },
-    {
-        "image_id": 12,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Cyrillic"
-            ],
             "font": 0
         },
         "location": "Corner",
         "pattern": null,
         "appearance": [
             "Transparent",
-            0.6754659144072347
+            0.6685799583403809
         ],
-        "size": "Small",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
             255,
@@ -309,11 +282,11 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 45.61315997753268,
+        "Difference Percentage": 63.301370255704626,
         "GrayScale": null
     },
     {
-        "image_id": 13,
+        "image_id": 12,
         "content": {
             "type": "Text",
             "language": [
@@ -325,17 +298,43 @@
         "pattern": null,
         "appearance": [
             "Transparent",
-            0.6613307067206906
+            0.6469541613395625
         ],
-        "size": "Small",
+        "size": "Large",
         "angle": "Inclined",
         "color": [
-            255,
-            255,
+            0,
+            0,
             255
         ],
         "Success": false,
-        "Difference Percentage": 22.273700040488173,
+        "Difference Percentage": 46.13364225898693,
+        "GrayScale": null
+    },
+    {
+        "image_id": 13,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 0
+        },
+        "location": "Corner",
+        "pattern": null,
+        "appearance": [
+            "Opaque",
+            0.847854296040202
+        ],
+        "size": "Large",
+        "angle": "Inclined",
+        "color": [
+            0,
+            255,
+            0
+        ],
+        "Success": false,
+        "Difference Percentage": 22.79968477066343,
         "GrayScale": null
     },
     {
@@ -350,8 +349,8 @@
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Semi-Transparent",
-            0.7820886915853098
+            "Opaque",
+            0.9051541980301554
         ],
         "size": "Large",
         "angle": "Inclined",
@@ -361,7 +360,7 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 43.043109170751634,
+        "Difference Percentage": 43.10980902777778,
         "GrayScale": null
     },
     {
@@ -371,27 +370,53 @@
             "language": [
                 "Latin"
             ],
-            "font": 3
+            "font": 0
+        },
+        "location": "Corner",
+        "pattern": null,
+        "appearance": [
+            "Transparent",
+            0.6685032986738422
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 45.593995098039215,
+        "GrayScale": null
+    },
+    {
+        "image_id": 16,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 0
         },
         "location": "Corner",
         "pattern": null,
         "appearance": [
             "Semi-Transparent",
-            0.7532379173320862
+            0.7296938627148358
         ],
         "size": "Large",
         "angle": "Inclined",
         "color": [
             255,
-            0,
-            0
+            255,
+            255
         ],
         "Success": false,
-        "Difference Percentage": 46.57418300653595,
+        "Difference Percentage": 67.4264705882353,
         "GrayScale": null
     },
     {
-        "image_id": 16,
+        "image_id": 17,
         "content": {
             "type": "Text",
             "language": [
@@ -402,35 +427,8 @@
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Semi-Transparent",
-            0.7565071401623036
-        ],
-        "size": "Large",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 67.49544508068715,
-        "GrayScale": null
-    },
-    {
-        "image_id": 17,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin",
-                "Chinese"
-            ],
-            "font": 3
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Semi-Transparent",
-            0.7152468218777782
+            "Transparent",
+            0.6003754726491306
         ],
         "size": "Medium",
         "angle": "Inclined",
@@ -440,7 +438,7 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 45.17333998496154,
+        "Difference Percentage": 45.482749146856385,
         "GrayScale": null
     },
     {
@@ -450,15 +448,15 @@
             "language": [
                 "Latin"
             ],
-            "font": 3
+            "font": 6
         },
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Semi-Transparent",
-            0.7796077575342
+            "Opaque",
+            0.9126462363382485
         ],
-        "size": "Large",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
             255,
@@ -466,7 +464,7 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 32.78330875122911,
+        "Difference Percentage": 32.850005784024525,
         "GrayScale": null
     },
     {
@@ -481,18 +479,18 @@
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Semi-Transparent",
-            0.7954239676495591
+            "Transparent",
+            0.6207881762206507
         ],
-        "size": "Medium",
+        "size": "Small",
         "angle": "Inclined",
         "color": [
-            0,
             255,
-            0
+            255,
+            255
         ],
         "Success": false,
-        "Difference Percentage": 57.160054125817,
+        "Difference Percentage": 57.15172462214052,
         "GrayScale": null
     },
     {
@@ -507,10 +505,10 @@
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Opaque",
-            0.8469096317376474
+            "Semi-Transparent",
+            0.7615424448278858
         ],
-        "size": "Medium",
+        "size": "Small",
         "angle": "Inclined",
         "color": [
             255,
@@ -518,7 +516,7 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 52.608585100706954,
+        "Difference Percentage": 52.74884953981592,
         "GrayScale": null
     },
     {
@@ -533,8 +531,8 @@
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Semi-Transparent",
-            0.7821822672725021
+            "Opaque",
+            0.9028457249508827
         ],
         "size": "Medium",
         "angle": "Inclined",
@@ -544,7 +542,7 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 30.373322632887962,
+        "Difference Percentage": 30.359440974029727,
         "GrayScale": null
     },
     {
@@ -554,23 +552,23 @@
             "language": [
                 "Latin"
             ],
-            "font": 6
+            "font": 3
         },
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Semi-Transparent",
-            0.7187921011854513
+            "Opaque",
+            0.913172583469318
         ],
-        "size": "Small",
+        "size": "Large",
         "angle": "Inclined",
         "color": [
+            0,
             255,
-            255,
-            255
+            0
         ],
         "Success": false,
-        "Difference Percentage": 48.086756924992216,
+        "Difference Percentage": 48.53664799253035,
         "GrayScale": null
     },
     {
@@ -580,23 +578,23 @@
             "language": [
                 "Latin"
             ],
-            "font": 3
+            "font": 0
         },
         "location": "Corner",
         "pattern": null,
         "appearance": [
             "Transparent",
-            0.685681746320417
+            0.6208341032301893
         ],
         "size": "Medium",
         "angle": "Inclined",
         "color": [
+            0,
             255,
-            255,
-            255
+            0
         ],
         "Success": false,
-        "Difference Percentage": 39.58441783793163,
+        "Difference Percentage": 39.85843599976864,
         "GrayScale": null
     },
     {
@@ -604,26 +602,25 @@
         "content": {
             "type": "Text",
             "language": [
-                "Latin",
-                "Chinese"
+                "Greek"
             ],
-            "font": 0
+            "font": 3
         },
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Semi-Transparent",
-            0.7969384943753982
+            "Opaque",
+            0.8143845993776252
         ],
-        "size": "Large",
+        "size": "Small",
         "angle": "Inclined",
         "color": [
-            0,
             255,
-            0
+            255,
+            255
         ],
         "Success": false,
-        "Difference Percentage": 40.45155156457864,
+        "Difference Percentage": 39.15448406501243,
         "GrayScale": null
     },
     {
@@ -631,7 +628,7 @@
         "content": {
             "type": "Text",
             "language": [
-                "Cyrillic"
+                "Greek"
             ],
             "font": 3
         },
@@ -639,9 +636,9 @@
         "pattern": null,
         "appearance": [
             "Opaque",
-            0.8598410401778539
+            0.8792622367470531
         ],
-        "size": "Medium",
+        "size": "Large",
         "angle": "Inclined",
         "color": [
             255,
@@ -649,7 +646,7 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 52.56416652206606,
+        "Difference Percentage": 52.406190352247094,
         "GrayScale": null
     },
     {
@@ -657,18 +654,17 @@
         "content": {
             "type": "Text",
             "language": [
-                "Latin",
-                "Chinese"
+                "Latin"
             ],
-            "font": 6
+            "font": 0
         },
         "location": "Corner",
         "pattern": null,
         "appearance": [
             "Opaque",
-            0.8268853989233867
+            0.8066982953748617
         ],
-        "size": "Large",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
             255,
@@ -676,7 +672,7 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 39.69102463994447,
+        "Difference Percentage": 39.16572676268147,
         "GrayScale": null
     },
     {
@@ -684,175 +680,17 @@
         "content": {
             "type": "Text",
             "language": [
-                "Chinese"
+                "Latin"
             ],
             "font": 6
         },
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Transparent",
-            0.6448352505517027
-        ],
-        "size": "Large",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 53.49673202614379,
-        "GrayScale": null
-    },
-    {
-        "image_id": 28,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 0
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Transparent",
-            0.6248348254337336
-        ],
-        "size": "Large",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 38.173513505697265,
-        "GrayScale": null
-    },
-    {
-        "image_id": 29,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin",
-                "Greek"
-            ],
-            "font": 0
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Transparent",
-            0.6389912293577563
-        ],
-        "size": "Medium",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 20.494823580473856,
-        "GrayScale": null
-    },
-    {
-        "image_id": 30,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 0
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Opaque",
-            0.863675746977326
-        ],
-        "size": "Large",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 41.92029614205564,
-        "GrayScale": null
-    },
-    {
-        "image_id": 31,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 0
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Transparent",
-            0.6924083111930417
-        ],
-        "size": "Large",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 55.763215079846375,
-        "GrayScale": null
-    },
-    {
-        "image_id": 32,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 3
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
             "Semi-Transparent",
-            0.7449712424808247
+            0.7036920777475828
         ],
-        "size": "Medium",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 70.7116880675574,
-        "GrayScale": null
-    },
-    {
-        "image_id": 33,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin",
-                "Greek"
-            ],
-            "font": 3
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Transparent",
-            0.6276069402296298
-        ],
-        "size": "Medium",
+        "size": "Large",
         "angle": "Inclined",
         "color": [
             255,
@@ -860,7 +698,163 @@
             0
         ],
         "Success": false,
-        "Difference Percentage": 48.910152602707754,
+        "Difference Percentage": 54.465020576131685,
+        "GrayScale": null
+    },
+    {
+        "image_id": 28,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Cyrillic"
+            ],
+            "font": 0
+        },
+        "location": "Corner",
+        "pattern": null,
+        "appearance": [
+            "Semi-Transparent",
+            0.7696649281320864
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            0,
+            0
+        ],
+        "Success": false,
+        "Difference Percentage": 38.35054080629302,
+        "GrayScale": null
+    },
+    {
+        "image_id": 29,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Greek"
+            ],
+            "font": 3
+        },
+        "location": "Corner",
+        "pattern": null,
+        "appearance": [
+            "Semi-Transparent",
+            0.774984324133225
+        ],
+        "size": "Large",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 20.644882301879086,
+        "GrayScale": null
+    },
+    {
+        "image_id": 30,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Greek"
+            ],
+            "font": 6
+        },
+        "location": "Corner",
+        "pattern": null,
+        "appearance": [
+            "Transparent",
+            0.6856896683868169
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 41.36553588987218,
+        "GrayScale": null
+    },
+    {
+        "image_id": 31,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Greek"
+            ],
+            "font": 6
+        },
+        "location": "Corner",
+        "pattern": null,
+        "appearance": [
+            "Semi-Transparent",
+            0.7957096442157297
+        ],
+        "size": "Medium",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 56.1135957819554,
+        "GrayScale": null
+    },
+    {
+        "image_id": 32,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Greek"
+            ],
+            "font": 6
+        },
+        "location": "Corner",
+        "pattern": null,
+        "appearance": [
+            "Semi-Transparent",
+            0.7693944631529153
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            0,
+            255,
+            0
+        ],
+        "Success": false,
+        "Difference Percentage": 70.75976777141535,
+        "GrayScale": null
+    },
+    {
+        "image_id": 33,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 3
+        },
+        "location": "Corner",
+        "pattern": null,
+        "appearance": [
+            "Transparent",
+            0.6817507589808616
+        ],
+        "size": "Large",
+        "angle": "Inclined",
+        "color": [
+            0,
+            0,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 49.381018032212886,
         "GrayScale": null
     },
     {
@@ -870,23 +864,23 @@
             "language": [
                 "Latin"
             ],
-            "font": 3
+            "font": 6
         },
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Opaque",
-            0.9848260701619453
+            "Transparent",
+            0.6194480445021706
         ],
         "size": "Large",
         "angle": "Inclined",
         "color": [
+            0,
             255,
-            255,
-            255
+            0
         ],
         "Success": false,
-        "Difference Percentage": 37.433700618890626,
+        "Difference Percentage": 37.762052461102435,
         "GrayScale": null
     },
     {
@@ -896,23 +890,23 @@
             "language": [
                 "Latin"
             ],
-            "font": 3
+            "font": 6
         },
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Semi-Transparent",
-            0.7048221119679782
+            "Opaque",
+            0.9603950735914083
         ],
         "size": "Medium",
         "angle": "Inclined",
         "color": [
-            0,
             255,
-            0
+            255,
+            255
         ],
         "Success": false,
-        "Difference Percentage": 67.19743389780155,
+        "Difference Percentage": 67.25883219449396,
         "GrayScale": null
     },
     {
@@ -928,9 +922,35 @@
         "pattern": null,
         "appearance": [
             "Semi-Transparent",
-            0.791027034061417
+            0.7150944034612738
         ],
-        "size": "Small",
+        "size": "Medium",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 55.04514963880289,
+        "GrayScale": null
+    },
+    {
+        "image_id": 37,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 6
+        },
+        "location": "Corner",
+        "pattern": null,
+        "appearance": [
+            "Opaque",
+            0.9408103811690043
+        ],
+        "size": "Large",
         "angle": "Inclined",
         "color": [
             0,
@@ -938,11 +958,37 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 54.878633470932236,
+        "Difference Percentage": 62.82903869512406,
         "GrayScale": null
     },
     {
-        "image_id": 37,
+        "image_id": 38,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 6
+        },
+        "location": "Corner",
+        "pattern": null,
+        "appearance": [
+            "Transparent",
+            0.6541139179163908
+        ],
+        "size": "Small",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 38.49759201926384,
+        "GrayScale": null
+    },
+    {
+        "image_id": 39,
         "content": {
             "type": "Text",
             "language": [
@@ -953,8 +999,8 @@
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Semi-Transparent",
-            0.7137684537043791
+            "Opaque",
+            0.8246829170077209
         ],
         "size": "Small",
         "angle": "Inclined",
@@ -964,59 +1010,7 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 62.44714847590954,
-        "GrayScale": null
-    },
-    {
-        "image_id": 38,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Greek"
-            ],
-            "font": 6
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Semi-Transparent",
-            0.7185812850969778
-        ],
-        "size": "Large",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 39.197913083362,
-        "GrayScale": null
-    },
-    {
-        "image_id": 39,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 6
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Transparent",
-            0.6002228406899255
-        ],
-        "size": "Small",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 19.213408814853373,
+        "Difference Percentage": 19.19790039909769,
         "GrayScale": null
     },
     {
@@ -1024,15 +1018,15 @@
         "content": {
             "type": "Text",
             "language": [
-                "Cyrillic"
+                "Latin"
             ],
-            "font": 6
+            "font": 3
         },
         "location": "Corner",
         "pattern": null,
         "appearance": [
             "Transparent",
-            0.676629812674967
+            0.6785475794529354
         ],
         "size": "Medium",
         "angle": "Inclined",
@@ -1042,7 +1036,7 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 29.483811961362715,
+        "Difference Percentage": 28.92619584707039,
         "GrayScale": null
     },
     {
@@ -1057,35 +1051,8 @@
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Semi-Transparent",
-            0.7971228448984975
-        ],
-        "size": "Medium",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 49.925892185782864,
-        "GrayScale": null
-    },
-    {
-        "image_id": 42,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin",
-                "Cyrillic"
-            ],
-            "font": 3
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Opaque",
-            0.9604579055836081
+            "Transparent",
+            0.6004376790875993
         ],
         "size": "Small",
         "angle": "Inclined",
@@ -1095,7 +1062,33 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 71.18431517149632,
+        "Difference Percentage": 49.79195586789288,
+        "GrayScale": null
+    },
+    {
+        "image_id": 42,
+        "content": {
+            "type": "Text",
+            "language": [
+                "Latin"
+            ],
+            "font": 0
+        },
+        "location": "Corner",
+        "pattern": null,
+        "appearance": [
+            "Opaque",
+            0.8056540210295065
+        ],
+        "size": "Large",
+        "angle": "Inclined",
+        "color": [
+            255,
+            255,
+            255
+        ],
+        "Success": false,
+        "Difference Percentage": 71.22436954132687,
         "GrayScale": null
     },
     {
@@ -1105,23 +1098,23 @@
             "language": [
                 "Latin"
             ],
-            "font": 0
+            "font": 6
         },
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Transparent",
-            0.6706494728114762
+            "Semi-Transparent",
+            0.7379376007168746
         ],
-        "size": "Large",
+        "size": "Medium",
         "angle": "Inclined",
         "color": [
-            255,
-            255,
+            0,
+            0,
             255
         ],
         "Success": false,
-        "Difference Percentage": 43.122035687431314,
+        "Difference Percentage": 43.13472439123142,
         "GrayScale": null
     },
     {
@@ -1129,8 +1122,7 @@
         "content": {
             "type": "Text",
             "language": [
-                "Latin",
-                "Cyrillic"
+                "Chinese"
             ],
             "font": 0
         },
@@ -1138,7 +1130,7 @@
         "pattern": null,
         "appearance": [
             "Transparent",
-            0.6730035467909867
+            0.6492024146538745
         ],
         "size": "Large",
         "angle": "Inclined",
@@ -1148,7 +1140,7 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 31.437040893053386,
+        "Difference Percentage": 31.310587656891663,
         "GrayScale": null
     },
     {
@@ -1158,91 +1150,13 @@
             "language": [
                 "Latin"
             ],
-            "font": 0
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Transparent",
-            0.6347996250380392
-        ],
-        "size": "Medium",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 46.9689861621732,
-        "GrayScale": null
-    },
-    {
-        "image_id": 46,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
             "font": 3
         },
         "location": "Corner",
         "pattern": null,
         "appearance": [
-            "Transparent",
-            0.602266961221998
-        ],
-        "size": "Medium",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 34.10881469704999,
-        "GrayScale": null
-    },
-    {
-        "image_id": 47,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 0
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
             "Opaque",
-            0.8502016243948466
-        ],
-        "size": "Medium",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 54.38501359245763,
-        "GrayScale": null
-    },
-    {
-        "image_id": 48,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 0
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Transparent",
-            0.672680311245852
+            0.9748678684276048
         ],
         "size": "Small",
         "angle": "Inclined",
@@ -1252,320 +1166,7 @@
             255
         ],
         "Success": false,
-        "Difference Percentage": 57.542765631326276,
-        "GrayScale": null
-    },
-    {
-        "image_id": 49,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Chinese"
-            ],
-            "font": 6
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Opaque",
-            0.969106200276983
-        ],
-        "size": "Medium",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 62.70291449913299,
-        "GrayScale": null
-    },
-    {
-        "image_id": 50,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 6
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Transparent",
-            0.6291472826857274
-        ],
-        "size": "Small",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 49.4861617213257,
-        "GrayScale": null
-    },
-    {
-        "image_id": 51,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Greek"
-            ],
-            "font": 3
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Opaque",
-            0.8219720214459652
-        ],
-        "size": "Small",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 42.18422841112846,
-        "GrayScale": null
-    },
-    {
-        "image_id": 52,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 6
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Opaque",
-            0.8304862045731844
-        ],
-        "size": "Small",
-        "angle": "Inclined",
-        "color": [
-            0,
-            0,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 54.9540608593164,
-        "GrayScale": null
-    },
-    {
-        "image_id": 53,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 3
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Opaque",
-            0.8453952815712629
-        ],
-        "size": "Small",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 15.696613453641042,
-        "GrayScale": null
-    },
-    {
-        "image_id": 54,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 0
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Transparent",
-            0.6329916758923676
-        ],
-        "size": "Medium",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 41.08801116316733,
-        "GrayScale": null
-    },
-    {
-        "image_id": 55,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 3
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Semi-Transparent",
-            0.7070839739731154
-        ],
-        "size": "Large",
-        "angle": "Inclined",
-        "color": [
-            0,
-            0,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 64.95524611024351,
-        "GrayScale": null
-    },
-    {
-        "image_id": 56,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Greek"
-            ],
-            "font": 0
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Transparent",
-            0.627520376471604
-        ],
-        "size": "Large",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 39.13268552258661,
-        "GrayScale": null
-    },
-    {
-        "image_id": 57,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin",
-                "Chinese"
-            ],
-            "font": 6
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Semi-Transparent",
-            0.7355457751230672
-        ],
-        "size": "Large",
-        "angle": "Inclined",
-        "color": [
-            0,
-            0,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 63.91741135982416,
-        "GrayScale": null
-    },
-    {
-        "image_id": 58,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Cyrillic"
-            ],
-            "font": 6
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Semi-Transparent",
-            0.77100932080304
-        ],
-        "size": "Medium",
-        "angle": "Inclined",
-        "color": [
-            0,
-            255,
-            0
-        ],
-        "Success": false,
-        "Difference Percentage": 39.115803401006424,
-        "GrayScale": null
-    },
-    {
-        "image_id": 59,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Cyrillic"
-            ],
-            "font": 0
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Semi-Transparent",
-            0.7056599486043156
-        ],
-        "size": "Large",
-        "angle": "Inclined",
-        "color": [
-            255,
-            255,
-            255
-        ],
-        "Success": false,
-        "Difference Percentage": 26.262977905026318,
-        "GrayScale": null
-    },
-    {
-        "image_id": 60,
-        "content": {
-            "type": "Text",
-            "language": [
-                "Latin"
-            ],
-            "font": 3
-        },
-        "location": "Corner",
-        "pattern": null,
-        "appearance": [
-            "Transparent",
-            0.6767975489034441
-        ],
-        "size": "Medium",
-        "angle": "Inclined",
-        "color": [
-            0,
-            255,
-            0
-        ],
-        "Success": false,
-        "Difference Percentage": 37.98524116436698,
+        "Difference Percentage": 46.694016799428105,
         "GrayScale": null
     }
 ]
